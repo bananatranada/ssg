@@ -1,0 +1,5 @@
+{{ partial "header.html" . }}
+  {{.Site.Params.env}} {{ if .Params.navbar }} {{ partial "navbar.html" . }} {{ end }} {{.Content}}
+  {{ block "main" . }} {{ end }} if production, include jquery and other cdn (exclude in webpack too) also make sure the
+  cache bust css and js
+{{ partial "footer.html" . }}

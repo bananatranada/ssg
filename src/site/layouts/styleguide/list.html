@@ -1,0 +1,12 @@
+{{ define "main" }}
+<nav class="nav">
+  styleguide/list
+  {{ .Title }}
+  {{ range $page := .Data.Pages }}
+    {{ if eq $page.Type "styleguide" }}
+      <a href="#" class="nav-link">{{$page.Title}}</a>
+      {{$page.TableOfContents}}
+    {{end}}
+  {{ end }}
+</nav>
+{{ end }}
