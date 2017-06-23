@@ -22,7 +22,7 @@ const config = {
     sourcemap: $.util.env.env === 'production',
     src: '../src/scss/main.scss',
     dest: './public/css',
-    config: { includePaths: ['./node_modules'] },
+    config: { includePaths: ['../node_modules'] },
     bsStream: browserSync.stream,
     watchpath: ['../src/scss/**/*.scss'],
     cleanpath: ['./public/css/main*.css*'],
@@ -79,6 +79,14 @@ const config = {
       }
     },
   },
+  astrum: {
+    watchpath: [
+      './public/index.html',
+      './public/data.json',
+      './public/components/**',
+      './public/pages/**',
+    ],
+  },
 };
 
 gulp.task('scss', done => runSequence('scss:clean', 'scss:build', done));
@@ -108,4 +116,5 @@ gulp.task('server', ['all'], () => {
   gulp.watch(config.scss.watchpath, ['scss']);
   gulp.watch(config.js.watchpath, ['js']);
   gulp.watch(config.media.watchpath, ['media']);
+  gulp.watch(config.astrum.watchpath, () => browserSync.reload());
 });

@@ -7,8 +7,8 @@
     "build": "gulp all --env=production",
     "build-preview": "gulp server --env=production",
     "dev": "gulp server --env=development",
-    "style:build": "gulp --gulpfile ./styleguide/gulpfile.babel.js all",
-    "style": "gulp --gulpfile ./styleguide/gulpfile.babel.js --env=development server",
+    "style:build": "gulp all --gulpfile ./styleguide/gulpfile.babel.js",
+    "style": "gulp server --gulpfile ./styleguide/gulpfile.babel.js --env=development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -18,6 +18,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.24.1",
+    "bootstrap": "^4.0.0-alpha.6",
     "browser-sync": "^2.18.12",
     "chalk": "^1.1.3",
     "del": "^3.0.0",
