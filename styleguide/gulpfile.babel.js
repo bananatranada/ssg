@@ -57,12 +57,13 @@ const config = {
     },
   },
   media: {
-    src: './src/media/**',
+    src: '../src/media/**',
     dest: './public',
     minify: $.util.env.env === 'production',
-    watchpath: ['./src/media/**'],
+    watchpath: ['../src/media/**'],
     cleanpath: [
-      './public/favicon.*',
+      // Whitelist for safety
+      './public/favicon.png',
       './public/fonts/**',
       './public/images/**',
       './public/videos/**',
@@ -86,6 +87,8 @@ const config = {
       './public/components/**',
       './public/pages/**',
     ],
+    cssWatchpath: ['./public/app/css/**/*.css'],
+    jsWatchpath: ['./public/app/js/**/*.js'],
   },
 };
 
@@ -94,11 +97,11 @@ gulp.task('scss:build', tasks.buildScss($, config.scss));
 gulp.task('scss:clean', () => del(config.scss.cleanpath));
 
 gulp.task('js', done => runSequence('js:clean', 'js:build', done));
-gulp.task('js', tasks.buildJs($, config.js));
+gulp.task('js:build', tasks.buildJs($, config.js));
 gulp.task('js:clean', () => del(config.js.cleanpath));
 
 gulp.task('media', done => runSequence('media:clean', 'media:build', done));
-gulp.task('media', tasks.buildMedia($, config.media));
+gulp.task('media:build', tasks.buildMedia($, config.media));
 gulp.task('media:clean', () => del(config.media.cleanpath));
 
 gulp.task('all', ['scss', 'js', 'media']);
@@ -107,6 +110,7 @@ gulp.task('all:clean', ['scss:clean', 'js:clean', 'media:clean']);
 
 gulp.task('server', ['all'], () => {
   browserSync.init({
+    port: 3002,
     server: {
       baseDir: './public',
     },
@@ -116,5 +120,12 @@ gulp.task('server', ['all'], () => {
   gulp.watch(config.scss.watchpath, ['scss']);
   gulp.watch(config.js.watchpath, ['js']);
   gulp.watch(config.media.watchpath, ['media']);
-  gulp.watch(config.astrum.watchpath, () => browserSync.reload());
+  gulp
+    .watch(config.astrum.watchpath, () => browserSync.reload())
+    .on('error', err => {
+      console.log(chalk.red(err));
+      gulp.emit('exit');
+    });
+  gulp.watch(config.astrum.cssWatchpath, browserSync.reload());
+  gulp.watch(config.js.jsWatchpath, () => browserSync.reload());
 });
