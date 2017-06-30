@@ -1,0 +1,98 @@
+.btn {
+  border: none;
+  font-size: 0.9375rem;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  @include hover-focus {
+    transform: translateY(-1px);
+    box-shadow: $btn-focus-box-shadow;
+  }
+  @include hover-focus-active {
+    border: none;
+  }
+}
+
+.btn-primary {
+  @include hover-focus {
+    background: lighten($btn-primary-bg, 6%);
+  }
+}
+
+.btn-secondary {
+  @include hover-focus {
+    background: lighten($btn-secondary-bg, 6%);
+  }
+}
+
+.btn-success {
+  @include hover-focus {
+    background: lighten($btn-success-bg, 6%);
+  }
+}
+
+.btn-info {
+  @include hover-focus {
+    background: lighten($btn-info-bg, 6%);
+  }
+}
+
+.btn-warning {
+  @include hover-focus {
+    background: lighten($btn-warning-bg, 6%);
+  }
+}
+
+.btn-danger {
+  @include hover-focus {
+    background: lighten($btn-danger-bg, 6%);
+  }
+}
+
+.btn-inverted-primary {
+  @include plain-hover-focus {
+    color: $btn-primary-bg;
+    background: $btn-primary-color;
+  }
+}
+
+.btn-inverted-secondary {
+  @include plain-hover-focus {
+    color: $btn-secondary-bg;
+    background: $btn-secondary-color;
+  }
+}
+
+
+.btn-inverted-success {
+  @include plain-hover-focus {
+    color: $btn-success-bg;
+    background: $btn-success-color;
+  }
+}
+
+
+.btn-inverted-info {
+  @include plain-hover-focus {
+    color: $btn-info-bg;
+    background: $btn-info-color;
+  }
+}
+
+
+.btn-inverted-warning {
+  @include plain-hover-focus {
+    color: $btn-warning-bg;
+    background: $btn-warning-color;
+  }
+}
+
+
+.btn-inverted-danger {
+  @include plain-hover-focus {
+    color: $btn-danger-bg;
+    background: $btn-danger-color;
+  }
+}
+
+
+

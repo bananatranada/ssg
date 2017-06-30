@@ -1,0 +1,30 @@
+.navbar {
+  white-space: nowrap;
+}
+
+.navbar-brand > svg {
+  vertical-align: -5px;
+}
+.navbar-nav {
+  & > .nav-item {
+    flex: 1;
+  }
+
+  .nav-link {
+    padding-right: 1.2em;
+    padding-left: 1.2em;
+    transition: $transition-base;
+  }
+}
+
+.navbar .icon-bars {
+  vertical-align: -12px;
+}
+
+.collapse.nav-popup {
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  background: pink;
+}
+
