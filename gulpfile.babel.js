@@ -68,7 +68,7 @@ const config = {
   },
   hugo: {
     env: $.util.env.env,
-    datapath: './src/site/data/env.json',
+    datapath: './src/site/data/global.json',
     watchpath: ['./src/site/**'],
     cleanpath: ['./public/**/*.{html,xml}'],
     args: $.util.env.env === 'production'
@@ -100,19 +100,19 @@ gulp.task('scss:build', tasks.buildScss($, config.scss));
 gulp.task('scss:clean', () => del(config.scss.cleanpath));
 
 gulp.task('js', done => runSequence('js:clean', 'js:build', done));
-gulp.task('js', tasks.buildJs($, config.js));
+gulp.task('js:build', tasks.buildJs($, config.js));
 gulp.task('js:clean', () => del(config.js.cleanpath));
 
 gulp.task('media', done => runSequence('media:clean', 'media:build', done));
-gulp.task('media', tasks.buildMedia($, config.media));
+gulp.task('media:build', tasks.buildMedia($, config.media));
 gulp.task('media:clean', () => del(config.media.cleanpath));
 
 gulp.task('hugo', done => runSequence('hugo:clean', 'hugo:build', done));
-gulp.task('hugo', tasks.buildHugo($, config.hugo));
+gulp.task('hugo:build', tasks.buildHugo($, config.hugo));
 gulp.task('hugo:clean', () => del(config.hugo.cleanpath));
 
-gulp.task('all', ['scss', 'js', 'hugo']);
-gulp.task('all:build', ['scss:build', 'js:build', 'hugo:build']);
+gulp.task('all', ['scss', 'js', 'hugo', 'media']);
+gulp.task('all:build', ['scss:build', 'js:build', 'hugo:build', 'media:build']);
 gulp.task('all:clean', () => del(['./public/**']));
 
 gulp.task('server', ['all'], () => {
@@ -121,9 +121,10 @@ gulp.task('server', ['all'], () => {
       baseDir: './public',
     },
     open: false,
-    notify: config.env !== 'production',
+    notify: false,
   });
   gulp.watch(config.scss.watchpath, ['scss']);
   gulp.watch(config.js.watchpath, ['js']);
   gulp.watch(config.hugo.watchpath, ['hugo']);
+  gulp.watch(config.media.watchpath, ['media']);
 });

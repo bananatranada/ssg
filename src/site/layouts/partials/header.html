@@ -3,10 +3,10 @@
 <head>
   <title>Hugo with Gulp and Webpack</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    {{if .Site.Data.env.isProduction}}
-    <link rel="stylesheet" href="/css/app.min.css"/>
+    {{if eq .Site.Data.global.env "production"}}
+    <link rel="stylesheet" href="/css/main.min.css"/>
     {{else}}
-    <link rel="stylesheet" href="/css/app.css"/>
+    <link rel="stylesheet" href="/css/main.css"/>
     {{end}}
 </head>
 <body>
