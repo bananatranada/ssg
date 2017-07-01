@@ -1,0 +1,41 @@
+.navbar {
+  position: absolute;
+  top: rem-calc(10px);
+  right: 0;
+  left: 0;
+
+  white-space: nowrap;
+}
+
+.navbar__row {
+  list-style: none;
+}
+
+.navbar__link {
+  line-height: 50px;
+  padding: 0 calc(10px + (100vw - 670px) * .040541);
+
+  .navbar__col--brand > &:first-child {
+    padding-left: $spacer-x;
+  }
+
+  .navbar__col--secondary > &:last-child,
+  .navbar__col--mobile > &:first-child {
+    padding-right: $spacer-x;
+  }
+}
+
+
+.popup__content {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  display: none;
+  opacity: 0;
+  transition: $transition-base;
+
+  &--active {
+    display: block;
+    opacity: 1;
+  }
+}

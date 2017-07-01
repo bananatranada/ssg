@@ -1,5 +1,3 @@
-console.log('hi111');
-
 import 'bootstrap/js/src/alert';
 import 'bootstrap/js/src/button';
 import 'bootstrap/js/src/carousel';
@@ -11,11 +9,8 @@ import 'bootstrap/js/src/scrollspy';
 import 'bootstrap/js/src/tab';
 import 'bootstrap/js/src/tooltip';
 
-// $('#collapseExample').collapse();
-
-$('#collapseExample').collapse('toggle');
-$('#collapseExample').collapse('toggle');
-// $('[href="#collapseExample"]').click(e => {
-//   e.preventDefault();
-//   $('#collapseExample').collapse('toggle');
-// });
+$('.popup__button').click((e) => {
+  e.preventDefault();
+  $('.popup__content').css('display', 'block');
+  setTimeout(() => $('.popup__content').addClass('popup__content--active'), 0)
+});
