@@ -9,8 +9,33 @@ import 'bootstrap/js/src/scrollspy';
 import 'bootstrap/js/src/tab';
 import 'bootstrap/js/src/tooltip';
 
-$('.popup__button').click((e) => {
+// $('.navbar-popup__open-button').click(e => {
+//   e.preventDefault();
+//   $('.navbar-popup__container').css('display', 'block');
+//   setTimeout(
+//     () =>
+//       $('.navbar-popup__container').addClass('navbar-popup__container--active'),
+//     0,
+//   );
+//
+//   setTimeout(
+//     () =>
+//       $('.navbar-popup__container').removeClass(
+//         'navbar-popup__container--active',
+//       ),
+//     2000,
+//   );
+// });
+
+$('.navbar-popup__open-button').click(e => {
   e.preventDefault();
-  $('.popup__content').css('display', 'block');
-  setTimeout(() => $('.popup__content').addClass('popup__content--active'), 0)
+  e.stopPropagation();
+  $('.navbar-popup').addClass('navbar-popup--active');
+});
+
+$(document).click(e => {
+  if ($(e.target).closest('.navbar-popup').length) {
+    return;
+  }
+  $('.navbar-popup').removeClass('navbar-popup--active');
 });
