@@ -1,0 +1,14 @@
+@include to-css($font-family-sans-serif-breakpoints, $font-family-sans-serif-shortcut, $font-family-sans-serif-properties, $font-family-sans-serif-modifiers);
+@include to-css($font-family-serif-breakpoints, $font-family-serif-shortcut, $font-family-serif-properties, $font-family-serif-modifiers);
+@include to-css($font-family-monospace-breakpoints, $font-family-monospace-shortcut, $font-family-monospace-properties, $font-family-monospace-modifiers);
+@include to-css($font-style-breakpoints, $font-style-shortcut, $font-style-properties, $font-style-modifiers);
+@include to-css($font-size-breakpoints, $font-size-shortcut, $font-size-properties, $font-size-modifiers);
+@include to-css($font-weight-breakpoints, $font-weight-shortcut, $font-weight-properties, $font-weight-modifiers);
+
+@include to-css($letter-spacing-breakpoints, $letter-spacing-shortcut, $letter-spacing-properties, $letter-spacing-modifiers);
+@include to-css($line-height-breakpoints, $line-height-shortcut, $line-height-properties, $line-height-modifiers);
+@include to-css($text-align-breakpoints, $text-align-shortcut, $text-align-properties, $text-align-modifiers);
+@include to-css($text-decoration-breakpoints, $text-decoration-shortcut, $text-decoration-properties, $text-decoration-modifiers);
+@include to-css($text-transformation-breakpoints, $text-transformation-shortcut, $text-transformation-properties, $text-transformation-modifiers);
+
+@include to-css($white-space-breakpoints, $white-space-shortcut, $white-space-properties, $white-space-modifiers);

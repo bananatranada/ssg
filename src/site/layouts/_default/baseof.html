@@ -2,5 +2,9 @@
 {{ if .Params.navbar }}
   {{ partial "navbar.html" . }}
 {{ end }}
+{{ if .Params.sidebar }}
+  {{ partial "sidebar.html" . }}
+{{ end }}
 {{ block "main" . }} {{ end }}
 {{ partial "footer.html" . }}
+

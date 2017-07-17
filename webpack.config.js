@@ -27,10 +27,6 @@ export default function configWebpack(options) {
       // only for modules that get exported; modules setting globals with windows don't work
       new webpack.ProvidePlugin({
         fetch: 'imports?this=>global!exports?global.fetch!whatwg-fetch',
-        $: 'jquery',
-        jQuery: 'jquery',
-        'window.jQuery': 'jquery',
-        Tether: 'tether',
       }),
     ],
   };

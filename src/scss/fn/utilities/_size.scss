@@ -1,0 +1,7 @@
+@include to-css($width-breakpoints, $width-shortcut, $width-properties, $width-modifiers);
+@include to-css($width-min-breakpoints, $width-min-shortcut, $width-min-properties, $width-min-modifiers);
+@include to-css($width-max-breakpoints, $width-max-shortcut, $width-max-properties, $width-max-modifiers);
+
+@include to-css($height-breakpoints, $height-shortcut, $height-properties, $height-modifiers);
+@include to-css($height-min-breakpoints, $height-min-shortcut, $height-min-properties, $height-min-modifiers);
+@include to-css($height-max-breakpoints, $height-max-shortcut, $height-max-properties, $height-max-modifiers);

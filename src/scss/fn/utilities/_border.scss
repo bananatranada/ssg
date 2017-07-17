@@ -1,0 +1,127 @@
+// border-style
+@include to-css(
+    $border-style-breakpoints,
+    $border-style-shortcut,
+    $border-style-properties,
+    $border-style-modifiers
+);
+
+// border-color
+@include to-css(
+    $border-color-breakpoints,
+    $border-color-shortcut,
+    $border-color-properties,
+    $border-color-modifiers
+);
+
+// border-width
+@include to-css(
+    $border-width-breakpoints,
+    $border-width-shortcut,
+    $border-width-properties,
+    $border-width-modifiers
+);
+
+// border-width-top
+@include to-css(
+    $border-width-top-breakpoints,
+    $border-width-top-shortcut,
+    $border-width-top-properties,
+    $border-width-top-modifiers
+);
+
+// border-width-right
+@include to-css(
+    $border-width-right-breakpoints,
+    $border-width-right-shortcut,
+    $border-width-right-properties,
+    $border-width-right-modifiers
+);
+
+// border-width-bottom
+@include to-css(
+    $border-width-bottom-breakpoints,
+    $border-width-bottom-shortcut,
+    $border-width-bottom-properties,
+    $border-width-bottom-modifiers
+);
+
+// border-width-left
+@include to-css(
+    $border-width-left-breakpoints,
+    $border-width-left-shortcut,
+    $border-width-left-properties,
+    $border-width-left-modifiers
+);
+
+// border-radius
+@include to-css(
+    $border-radius-breakpoints,
+    $border-radius-shortcut,
+    $border-radius-properties,
+    $border-radius-modifiers
+);
+
+// border-radius-top
+@include to-css(
+    $border-radius-top-breakpoints,
+    $border-radius-top-shortcut,
+    $border-radius-top-properties,
+    $border-radius-top-modifiers
+);
+
+// border-radius-right
+@include to-css(
+    $border-radius-right-breakpoints,
+    $border-radius-right-shortcut,
+    $border-radius-right-properties,
+    $border-radius-right-modifiers
+);
+
+// border-radius-bottom
+@include to-css(
+    $border-radius-bottom-breakpoints,
+    $border-radius-bottom-shortcut,
+    $border-radius-bottom-properties,
+    $border-radius-bottom-modifiers
+);
+
+// border-radius-left
+@include to-css(
+    $border-radius-left-breakpoints,
+    $border-radius-left-shortcut,
+    $border-radius-left-properties,
+    $border-radius-left-modifiers
+);
+
+// border-radius-top-left
+@include to-css(
+    $border-radius-top-left-breakpoints,
+    $border-radius-top-left-shortcut,
+    $border-radius-top-left-properties,
+    $border-radius-top-left-modifiers
+);
+
+// border-radius-top-right
+@include to-css(
+    $border-radius-top-right-breakpoints,
+    $border-radius-top-right-shortcut,
+    $border-radius-top-right-properties,
+    $border-radius-top-right-modifiers
+);
+
+// border-radius-bottom-right
+@include to-css(
+    $border-radius-bottom-right-breakpoints,
+    $border-radius-bottom-right-shortcut,
+    $border-radius-bottom-right-properties,
+    $border-radius-bottom-right-modifiers
+);
+
+// border-radius-bottom-left
+@include to-css(
+    $border-radius-bottom-left-breakpoints,
+    $border-radius-bottom-left-shortcut,
+    $border-radius-bottom-left-properties,
+    $border-radius-bottom-left-modifiers
+);

@@ -1,0 +1,3 @@
+@include to-css($color-breakpoints, $color-shortcut, $color-properties, $color-modifiers);
+@include to-css($background-color-breakpoints, $background-color-shortcut, $background-color-properties, $background-color-modifiers);
+@include to-css($opacity-breakpoints, $opacity-shortcut, $opacity-properties, $opacity-modifiers);

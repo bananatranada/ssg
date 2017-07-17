@@ -1,0 +1,9 @@
+@include to-css($flex-direction-breakpoints, $flex-direction-shortcut, $flex-direction-properties, $flex-direction-modifiers);
+@include to-css($flex-wrap-breakpoints, $flex-wrap-shortcut, $flex-wrap-properties, $flex-wrap-modifiers);
+@include to-css($flex-justify-content-breakpoints, $flex-justify-content-shortcut, $flex-justify-content-properties, $flex-justify-content-modifiers);
+@include to-css($flex-align-items-breakpoints, $flex-align-items-shortcut, $flex-align-items-properties, $flex-align-items-modifiers);
+@include to-css($flex-align-content-breakpoints, $flex-align-content-shortcut, $flex-align-content-properties, $flex-align-content-modifiers);
+@include to-css($flex-align-self-breakpoints, $flex-align-self-shortcut, $flex-align-self-properties, $flex-align-self-modifiers);
+@include to-css($flex-order-breakpoints, $flex-order-shortcut, $flex-order-properties, $flex-order-modifiers);
+@include to-css($flex-grow-breakpoints, $flex-grow-shortcut, $flex-grow-properties, $flex-grow-modifiers);
+@include to-css($flex-shrink-breakpoints, $flex-shrink-shortcut, $flex-shrink-properties, $flex-shrink-modifiers);

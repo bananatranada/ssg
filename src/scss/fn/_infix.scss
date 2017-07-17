@@ -1,0 +1,7 @@
+@function infix($var) {
+  @return if($var == '', '', "-#{$var}");
+}
+
+@function modifier-infix($var) {
+  @return if($var == '', '', "--#{$var}");
+}

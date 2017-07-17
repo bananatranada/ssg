@@ -58,7 +58,7 @@ const config = {
     src: './src/media/**',
     dest: './public',
     minify: $.util.env.env === 'production',
-    watchpath: ['./src/media/**'],
+    watchpath: ['./src/media/**/*'],
     cleanpath: [
       './public/favicon.*',
       './public/fonts/**',
@@ -69,7 +69,7 @@ const config = {
   hugo: {
     env: $.util.env.env,
     datapath: './src/site/data/global.json',
-    watchpath: ['./src/site/**'],
+    watchpath: ['./src/site/**/*'],
     cleanpath: ['./public/**/*.{html,xml}'],
     args: $.util.env.env === 'production'
       ? ['-d', `${__dirname}/public`, '-s', './src/site']
