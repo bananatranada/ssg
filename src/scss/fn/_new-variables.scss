@@ -186,7 +186,6 @@ $shortcuts: (
     )
   ),
 
-  // Display
   'd': (
     'breakpoints': (xs),
     'props': (display),
@@ -359,6 +358,114 @@ $shortcuts: (
     'mods': $spacers,
   ),
 
+
+  'fbd': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (flex-direction),
+    'mods': (
+      'row': row,
+      'col': column,
+      'row-reverse': row-reverse,
+      'col-reverse': column-reverse,
+    ),
+  ),
+  'fbw': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (flex-wrap),
+    'mods': (
+      'wrap': wrap,
+      'nowrap': nowrap,
+      'wrap-reverse': wrap-reverse,
+    ),
+  ),
+  'fbjc': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (justify-content),
+    'mods': (
+      'start': flex-start,
+      'end': flex-end,
+      'center': center,
+      'between': space-between,
+      'around': space-around,
+    ),
+  ),
+  'fbai': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (align-items),
+    'mods': (
+      'start': flex-start,
+      'end': flex-end,
+      'center': center,
+      'baseline': baseline,
+      'stretch': stretch,
+    ),
+  ),
+  'fbac': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (align-content),
+    'mods': (
+      'start': flex-start,
+      'end': flex-end,
+      'center': center,
+      'between': space-between,
+      'around': space-around,
+      'stretch': stretch,
+    ),
+  ),
+  'fbas': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (align-self),
+    'mods': (
+      'auto': auto,
+      'start': flex-start,
+      'end': flex-end,
+      'center': center,
+      'around': space-around,
+      'stretch': stretch,
+    ),
+  ),
+  'fbo': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (order),
+    'mods': (
+      '0': 0,
+      '1': 1,
+      '2': 2,
+      '3': 3,
+      '4': 4,
+      '5': 5,
+      '6': 6,
+      '7': 7,
+      '8': 8,
+      '9': 9,
+      'first': -9999,
+      'last': 9999,
+    ),
+  ),
+  'fbg': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (flex-grow),
+    'mods': (
+      '0': 0,
+      '1': 1,
+      '2': 2,
+      '3': 3,
+      '4': 4,
+      '5': 5,
+    ),
+  ),
+  'fbs': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (flex-shrink),
+    'mods': (
+      '0': 0,
+      '1': 1,
+      '2': 2,
+      '3': 3,
+      '4': 4,
+      '5': 5,
+    ),
+  ),
 
 
 
