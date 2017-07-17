@@ -1,0 +1,673 @@
+
+
+// Colors
+$colors: (
+  'black': #000,
+  'near-black': #111,
+  'dark-gray':#333,
+  'mid-gray':#555,
+  'gray': #777,
+  'silver': #999,
+  'light-silver': #aaa,
+  'moon-gray': #ccc,
+  'light-gray': #eee,
+  'near-white': #f4f4f4,
+  'white': #fff,
+
+  'transparent': transparent,
+
+  'black-90': rgba(0,0,0,.9),
+  'black-80': rgba(0,0,0,.8),
+  'black-70': rgba(0,0,0,.7),
+  'black-60': rgba(0,0,0,.6),
+  'black-50': rgba(0,0,0,.5),
+  'black-40': rgba(0,0,0,.4),
+  'black-30': rgba(0,0,0,.3),
+  'black-20': rgba(0,0,0,.2),
+  'black-10': rgba(0,0,0,.1),
+  'black-05': rgba(0,0,0,.05),
+  'black-025': rgba(0,0,0,.025),
+  'black-0125': rgba(0,0,0,.0125),
+
+  'white-90': rgba(255,255,255,.9),
+  'white-80': rgba(255,255,255,.8),
+  'white-70': rgba(255,255,255,.7),
+  'white-60': rgba(255,255,255,.6),
+  'white-50': rgba(255,255,255,.5),
+  'white-40': rgba(255,255,255,.4),
+  'white-30': rgba(255,255,255,.3),
+  'white-20': rgba(255,255,255,.2),
+  'white-10': rgba(255,255,255,.1),
+  'white-05': rgba(255,255,255,.05),
+  'white-025': rgba(255,255,255,.025),
+  'white-0125': rgba(255,255,255,.0125),
+
+  'dark-red': #e7040f,
+  'red': #ff4136,
+  'light-red': #ff725c,
+  'orange': #ff6300,
+  'gold': #ffb700,
+  'yellow': #ffd700,
+  'light-yellow': #fbf1a9,
+  'purple': #5e2ca5,
+  'light-purple': #a463f2,
+  'dark-pink': #d5008f,
+  'hot-pink':#ff41b4,
+  'pink': #ff80cc,
+  'light-pink': #ffa3d7,
+  'dark-green': #137752,
+  'green': #19a974,
+  'light-green': #9eebcf,
+  'navy': #001b44,
+  'dark-blue': #00449e,
+  'blue': #357edd,
+  'light-blue': #96ccff,
+  'lightest-blue': #cdecff,
+  'washed-blue': #f6fffe,
+  'washed-green': #e8fdf5,
+  'washed-yellow': #fffceb,
+  'washed-red': #ffdfdf,
+) !default;
+
+
+
+
+
+
+
+
+
+$global-breakpoints: (
+  'xs': 0,
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px
+) !default;
+
+
+$spacers: (
+  '1': 1rem,
+  '2': 1.618rem,
+  '3': 4.236rem,
+  '4': 6.854rem,
+  '5': 11.089rem,
+  '6': 17.942rem,
+  '7': 29.03rem,
+  '8': 46.971rem,
+  '9': 75.999rem,
+  'auto': auto,
+) !default;
+
+$type-scale: (
+  '1': .79rem,
+  '2': .889rem,
+  '3': 1rem,
+  '4': 1.125rem,
+  '5': 1.266rem,
+  '6': 1.424rem,
+  '7': 1.602rem,
+  '8': 1.802rem,
+  '9': 2.027rem,
+  '10': 2.281rem,
+  '11': 2.566rem,
+  '12': 2.887rem,
+  '13': 3.247rem,
+  '14': 3.653rem,
+  '15': 4.11rem,
+  '16': 5.624rem,
+  '17': 5.202rem,
+);
+
+
+$shortcuts: (
+
+
+  // Layouts
+  'pos': (
+    'breakpoints': (xs),
+    'props': (position),
+    'mods': (
+      'static': static,
+      'relative': relative,
+      'absolute': absolute,
+      'fixed': fixed,
+    )
+  ),
+  't': (
+    'breakpoints': (xs),
+    'props': (top),
+    'mods': (
+      '0': 0,
+      'mobile-menu': -3px,
+    )
+  ),
+  'r': (
+    'breakpoints': (xs),
+    'props': (right),
+    'mods': (
+      '0': 0,
+      'mobile-menu': -3px,
+    )
+  ),
+  'b': (
+    'breakpoints': (xs),
+    'props': (bottom),
+    'mods': (
+      '0': 0,
+      'mobile-menu': -3px,
+    )
+  ),
+  'l': (
+    'breakpoints': (xs),
+    'props': (left),
+    'mods': (
+      '0': 0,
+      'mobile-menu': -3px,
+    )
+  ),
+  'fl': (
+    'breakpoints': (xs),
+    'props': (float),
+    'mods': (
+      'l': left,
+      'r': right,
+      'none': none,
+    )
+  ),
+  'c': (
+    'breakpoints': (xs),
+    'props': (clear),
+    'mods': (
+      'l': left,
+      'r': right,
+      'x': both,
+      'none': none,
+    )
+  ),
+
+  // Display
+  'd': (
+    'breakpoints': (xs),
+    'props': (display),
+    'mods': (
+      'none': none,
+      'inline': inline,
+      'inline-block': inline-block,
+      'block': block,
+      'table': table,
+      'table-cell': table-cell,
+      'flex': flex,
+      'inline-flex': inline-flex,
+    )
+  ),
+  'w': (
+    'breakpoints': (xs),
+    'props': (width),
+    'mods': (
+      '1': 1rem,
+      '2': 1.618rem,
+      '3': 4.236rem,
+      '4': 6.854rem,
+      '5': 11.089rem,
+      '6': 17.942rem,
+      '7': 29.03rem,
+      '8': 46.971rem,
+      '9': 75.999rem,
+      '10p': 10%,
+      '20p': 20%,
+      '25p': 25%,
+      '30p': 30%,
+      '33p': 33.33%,
+      '40p': 40%,
+      '50p': 50%,
+      '60p': 60%,
+      '66p': 66.66%,
+      '70p': 70%,
+      '75p': 75%,
+      '80p': 80%,
+      '90p': 90%,
+      '100p': 100%,
+    )
+  ),
+  'mw': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (max-width),
+    'mods': (
+      '1': 1rem,
+      '2': 1.618rem,
+      '3': 4.236rem,
+      '4': 6.854rem,
+      '5': 11.089rem,
+      '6': 17.942rem,
+      '7': 29.03rem,
+      '8': 46.971rem,
+      '9': 75.999rem,
+    )
+  ),
+  'h': (
+    'breakpoints': (xs),
+    'props': (height),
+    'mods': (
+      '1': 1rem,
+      '2': 1.618rem,
+      '3': 4.236rem,
+      '4': 6.854rem,
+      '5': 11.089rem,
+      '6': 17.942rem,
+      '7': 29.03rem,
+      '8': 46.971rem,
+      '9': 75.999rem,
+      '10p': 10%,
+      '20p': 20%,
+      '25p': 25%,
+      '30p': 30%,
+      '33p': 33.33%,
+      '40p': 40%,
+      '50p': 50%,
+      '60p': 60%,
+      '66p': 66.66%,
+      '70p': 70%,
+      '75p': 75%,
+      '80p': 80%,
+      '90p': 90%,
+      '100p': 100%,
+      '10vh': 10vh,
+      '20vh': 20vh,
+      '25vh': 25vh,
+      '30vh': 30vh,
+      '33vh': 33.33vh,
+      '40vh': 40vh,
+      '50vh': 50vh,
+      '60vh': 60vh,
+      '66vh': 66.66vh,
+      '70vh': 70vh,
+      '75vh': 75vh,
+      '80vh': 80vh,
+      '90vh': 90vh,
+      '100vh': 100vh,
+    )
+  ),
+  'p': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (padding),
+    'mods': $spacers,
+  ),
+  'px': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (padding-right, padding-left),
+    'mods': $spacers,
+  ),
+  'py': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (padding-top, padding-bottom),
+    'mods': $spacers,
+  ),
+  'pt': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (padding-top),
+    'mods': $spacers,
+  ),
+  'pr': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (padding-right),
+    'mods': $spacers,
+  ),
+  'pb': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (padding-bottom),
+    'mods': $spacers,
+  ),
+  'pl': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (padding-left),
+    'mods': $spacers,
+  ),
+  'm': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (margin),
+    'mods': $spacers,
+  ),
+  'mx': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (margin-right, margin-left),
+    'mods': $spacers,
+  ),
+  'my': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (margin-top, margin-bottom),
+    'mods': $spacers,
+  ),
+  'mt': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (margin-top),
+    'mods': $spacers,
+  ),
+  'mr': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (margin-right),
+    'mods': $spacers,
+  ),
+  'mb': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (margin-bottom),
+    'mods': $spacers,
+  ),
+  'ml': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (margin-left),
+    'mods': $spacers,
+  ),
+
+
+
+
+  // Theming
+  '': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (color),
+    'mods': $colors,
+  ),
+  'bg': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (background-color),
+    'mods': $colors,
+  ),
+  'o': (
+    'breakpoints': (xs),
+    'props': (opacity),
+    'mods': (
+      '0': 0,
+      '3p': .03,
+      '5p': .05,
+      '10p': .1,
+      '20p': .2,
+      '30p': .3,
+      '40p': .4,
+      '50p': .5,
+      '60p': .6,
+      '70p': .7,
+      '80p': .8,
+      '90p': .9,
+      '100p': 1,
+    )
+  ),
+
+  'bc': (
+    'breakpoints': (xs),
+    'props': (border-color),
+    'mods': $colors,
+  ),
+  'bs': (
+    'breakpoints': (xs),
+    'props': (border-style),
+    'mods': (
+      'dotted': dotted,
+      'dashed': dashed,
+      'solid': solid,
+      'rm': none,
+    )
+  ),
+  'bw': (
+    'breakpoints': (xs),
+    'props': (border-width),
+    'mods': (
+      '0': 0,
+      '1': .125rem,
+      '2': .25rem,
+      '3': .5rem,
+      '4': 1rem,
+      '5': 2rem,
+    )
+  ),
+  'br': (
+    'breakpoints': (xs),
+    'props': (border-radius),
+    'mods': (
+      '0': 0,
+      '1': .125rem,
+      '2': .25rem,
+      '3': .5rem,
+      '4': 1rem,
+      '100p': 100%,
+      'pill': 9999px,
+    )
+  ),
+
+  'bg-size': (
+    'breakpoints': (xs),
+    'props': (background-size),
+    'mods': (
+      'cover': cover,
+      'contain': contain,
+    )
+  ),
+
+  'shadow': (
+    'breakpoints': (xs),
+    'props': (box-shadow),
+    'mods': (
+      '1': (0px 0px 4px 2px rgba( 0, 0, 0, 0.2 )),
+      '2': (0px 0px 8px 2px rgba( 0, 0, 0, 0.2 )),
+      '3': (2px 2px 4px 2px rgba( 0, 0, 0, 0.2 )),
+      '4': (2px 2px 8px 0px rgba( 0, 0, 0, 0.2 )),
+      '5': (4px 4px 8px 0px rgba( 0, 0, 0, 0.2 )),
+    )
+  ),
+
+  'transition': (
+    'breakpoints': (xs),
+    'props': (transition),
+    'mods': (
+      '1': all .3s ease-in,
+    )
+  ),
+
+  'hover': (
+    'breakpoints': (xs),
+    'props': (color),
+    'mods': (
+      'red:hover': darken(map-get($colors, 'red'), 10%),
+    )
+  ),
+  'focus': (
+    'breakpoints': (xs),
+    'props': (color),
+    'mods': (
+      'red:hover': darken(map-get($colors, 'red'), 10%),
+    )
+  ),
+  'active': (
+    'breakpoints': (xs),
+    'props': (color),
+    'mods': (
+      'red:hover': darken(map-get($colors, 'red'), 10%),
+    )
+  ),
+  'visited': (
+    'breakpoints': (xs),
+    'props': (color),
+    'mods': (
+      'red:hover': darken(map-get($colors, 'red'), 10%),
+    )
+  ),
+
+  'hover-bg': (
+    'breakpoints': (xs),
+    'props': (background-color),
+    'mods': (
+      'red:hover': darken(map-get($colors, 'red'), 10%),
+    )
+  ),
+  'focus-bg': (
+    'breakpoints': (xs),
+    'props': (background-color),
+    'mods': (
+      'red:hover': darken(map-get($colors, 'red'), 10%),
+    )
+  ),
+  'active-bg': (
+    'breakpoints': (xs),
+    'props': (background-color),
+    'mods': (
+      'red:hover': darken(map-get($colors, 'red'), 10%),
+    )
+  ),
+  'visited-bg': (
+    'breakpoints': (xs),
+    'props': (background-color),
+    'mods': (
+      'red:hover': darken(map-get($colors, 'red'), 10%),
+    )
+  ),
+
+
+  // TYPOGRAPHY
+  'f': (
+    'breakpoints': (xs),
+    'props': (font-size),
+    'mods': $type-scale,
+  ),
+  'lh': (
+    'breakpoints': (xs),
+    'props': (line-height),
+    'mods': (
+      '0': 1,
+      '1': 1.25,
+      '2': 1.5,
+    ),
+  ),
+  'ls': (
+    'breakpoints': (xs),
+    'props': (letter-spacing),
+    'mods': (
+      '0': 0,
+      '1': .1em,
+      '2': .25em,
+    ),
+  ),
+  'fw': (
+    'breakpoints': (xs),
+    'props': (font-weight),
+    'mods': (
+      '1': 100,
+      '2': 200,
+      '3': 300,
+      '4': 400,
+      '5': 500,
+      '6': 600,
+      '7': 700,
+      '8': 800,
+      '9': 900,
+    ),
+  ),
+  'fs': (
+    'breakpoints': (xs),
+    'props': (font-style),
+    'mods': (
+      'rm': normal,
+      'i': italic,
+    ),
+  ),
+  'v': (
+    'breakpoints': (xs),
+    'props': (vertical-align),
+    'mods': (
+      'base': baseline,
+      'mid': middle,
+      'top': top,
+      'bot': bottom,
+    ),
+  ),
+  'tt': (
+    'breakpoints': (xs),
+    'props': (text-transform),
+    'mods': (
+      'c': capitalize,
+      'l': lowercase,
+      'u': uppercase,
+      'rm': none,
+    ),
+  ),
+  'ws': (
+    'breakpoints': (xs),
+    'props': (white-space),
+    'mods': (
+      'pre': pre,
+      'nowrap': nowrap,
+      'rm': normal,
+    ),
+  ),
+  'ff': (
+    'breakpoints': (xs),
+    'props': (font-family),
+    'mods': (
+      'ss-system': (apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif),
+      's-system': (Georgia, "Times New Roman", Times, serif),
+      'm-system': (Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace),
+    ),
+  ),
+
+) !default;
+
+
+
+
+
+
+
+@mixin breakpoint($name, $global-breakpoints: $global-breakpoints) {
+  $min-width: map-get($global-breakpoints, $name);
+  @if ($min-width == 0) {
+    @content;
+  } @else {
+    @media (min-width: $min-width) {
+      @content;
+    }
+  }
+}
+
+
+@function infix($s, $prevs...) {
+  // empty string
+  @if ($s == '') {
+    @return $s;
+  }
+  // if there's a string before, infix it
+  @each $prev in $prevs {
+    @if ($prev != '') {
+      @return '-#{$s}';
+    }
+  }
+  @return $s;
+}
+
+
+@mixin to-css($shortcuts, $global-breakpoints) {
+    @each $shortcut, $shortcut-vars in $shortcuts {
+        $breakpoints: map-get($shortcut-vars, 'breakpoints');
+        $props: map-get($shortcut-vars, 'props');
+        $mods: map-get($shortcut-vars, 'mods');
+
+        @each $breakpoint in $breakpoints {
+            @include breakpoint($breakpoint) {
+                // $global-breakpoint: breakpoint-key($global-breakpoints, $global-breakpoint);
+                // $global-breakpoint: if($min-width == 0, '', $global-breakpoint);
+                // @debug $global-breakpoint;
+                // $global-breakpoint-infix: if($global-breakpoint == '', $breakpoint, infix($global-breakpoint, $shortcut));
+                // $global-breakpoint-infix: infix($global-breakpoint);
+                $breakpoint: if(map-get($global-breakpoints, $breakpoint) == 0, '', $breakpoint);
+                $breakpoint-infix: infix($breakpoint, $shortcut);
+                @each $mod, $val in $mods {
+                    $mod-infix: infix($mod, $shortcut, $breakpoint-infix);
+                    @each $prop in $props {
+                        .#{$shortcut}#{$breakpoint-infix}#{$mod-infix} { #{$prop}: #{$val}; }
+                    }
+                }
+            }
+        }
+    }
+}
+@include to-css($shortcuts, $global-breakpoints);
+
+

@@ -23,7 +23,7 @@ const config = {
     dest: './public/css',
     config: { includePaths: ['./node_modules'] },
     bsStream: browserSync.stream,
-    watchpath: ['./src/scss/**/*.scss'],
+    watchpath: ['src/scss/**/*.scss'], // don't use ./ or absolute /
     cleanpath: ['./public/css/main*.css*'],
     onSuccess() {
       if ($.util.env.env !== 'production') {
