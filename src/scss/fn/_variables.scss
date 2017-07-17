@@ -2,95 +2,82 @@
 
 // Colors
 $colors: (
-    'black': #000,
-    'near-black': #111,
-    'dark-gray':#333,
-    'mid-gray':#555,
-    'gray': #777,
-    'silver': #999,
-    'light-silver': #aaa,
-    'moon-gray': #ccc,
-    'light-gray': #eee,
-    'near-white': #f4f4f4,
-    'white': #fff,
+  'black': #000,
+  'near-black': #111,
+  'dark-gray':#333,
+  'mid-gray':#555,
+  'gray': #777,
+  'silver': #999,
+  'light-silver': #aaa,
+  'moon-gray': #ccc,
+  'light-gray': #eee,
+  'near-white': #f4f4f4,
+  'white': #fff,
 
-    'transparent': transparent,
+  'transparent': transparent,
 
-    'black-90': rgba(0,0,0,.9),
-    'black-80': rgba(0,0,0,.8),
-    'black-70': rgba(0,0,0,.7),
-    'black-60': rgba(0,0,0,.6),
-    'black-50': rgba(0,0,0,.5),
-    'black-40': rgba(0,0,0,.4),
-    'black-30': rgba(0,0,0,.3),
-    'black-20': rgba(0,0,0,.2),
-    'black-10': rgba(0,0,0,.1),
-    'black-05': rgba(0,0,0,.05),
-    'black-025': rgba(0,0,0,.025),
-    'black-0125': rgba(0,0,0,.0125),
+  'black-90': rgba(0,0,0,.9),
+  'black-80': rgba(0,0,0,.8),
+  'black-70': rgba(0,0,0,.7),
+  'black-60': rgba(0,0,0,.6),
+  'black-50': rgba(0,0,0,.5),
+  'black-40': rgba(0,0,0,.4),
+  'black-30': rgba(0,0,0,.3),
+  'black-20': rgba(0,0,0,.2),
+  'black-10': rgba(0,0,0,.1),
+  'black-05': rgba(0,0,0,.05),
+  'black-025': rgba(0,0,0,.025),
+  'black-0125': rgba(0,0,0,.0125),
 
-    'white-90': rgba(255,255,255,.9),
-    'white-80': rgba(255,255,255,.8),
-    'white-70': rgba(255,255,255,.7),
-    'white-60': rgba(255,255,255,.6),
-    'white-50': rgba(255,255,255,.5),
-    'white-40': rgba(255,255,255,.4),
-    'white-30': rgba(255,255,255,.3),
-    'white-20': rgba(255,255,255,.2),
-    'white-10': rgba(255,255,255,.1),
-    'white-05': rgba(255,255,255,.05),
-    'white-025': rgba(255,255,255,.025),
-    'white-0125': rgba(255,255,255,.0125),
+  'white-90': rgba(255,255,255,.9),
+  'white-80': rgba(255,255,255,.8),
+  'white-70': rgba(255,255,255,.7),
+  'white-60': rgba(255,255,255,.6),
+  'white-50': rgba(255,255,255,.5),
+  'white-40': rgba(255,255,255,.4),
+  'white-30': rgba(255,255,255,.3),
+  'white-20': rgba(255,255,255,.2),
+  'white-10': rgba(255,255,255,.1),
+  'white-05': rgba(255,255,255,.05),
+  'white-025': rgba(255,255,255,.025),
+  'white-0125': rgba(255,255,255,.0125),
 
-    'dark-red': #e7040f,
-    'red': #ff4136,
-    'light-red': #ff725c,
-    'orange': #ff6300,
-    'gold': #ffb700,
-    'yellow': #ffd700,
-    'light-yellow': #fbf1a9,
-    'purple': #5e2ca5,
-    'light-purple': #a463f2,
-    'dark-pink': #d5008f,
-    'hot-pink':#ff41b4,
-    'pink': #ff80cc,
-    'light-pink': #ffa3d7,
-    'dark-green': #137752,
-    'green': #19a974,
-    'light-green': #9eebcf,
-    'navy': #001b44,
-    'dark-blue': #00449e,
-    'blue': #357edd,
-    'light-blue': #96ccff,
-    'lightest-blue': #cdecff,
-    'washed-blue': #f6fffe,
-    'washed-green': #e8fdf5,
-    'washed-yellow': #fffceb,
-    'washed-red': #ffdfdf,
+  'dark-red': #e7040f,
+  'red': #ff4136,
+  'light-red': #ff725c,
+  'orange': #ff6300,
+  'gold': #ffb700,
+  'yellow': #ffd700,
+  'light-yellow': #fbf1a9,
+  'purple': #5e2ca5,
+  'light-purple': #a463f2,
+  'dark-pink': #d5008f,
+  'hot-pink':#ff41b4,
+  'pink': #ff80cc,
+  'light-pink': #ffa3d7,
+  'dark-green': #137752,
+  'green': #19a974,
+  'light-green': #9eebcf,
+  'navy': #001b44,
+  'dark-blue': #00449e,
+  'blue': #357edd,
+  'light-blue': #96ccff,
+  'lightest-blue': #cdecff,
+  'washed-blue': #f6fffe,
+  'washed-green': #e8fdf5,
+  'washed-yellow': #fffceb,
+  'washed-red': #ffdfdf,
 ) !default;
 
 
 
 
 
-$body-bg:       #fff !default;
-$body-color:    #000 !default;
-// $inverse-bg:    $gray-dark !default;
-// $inverse-color: $gray-lighter !default;
-$font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
-$font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
-$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base:       $font-family-sans-serif !default;
-$font-size-base: 1rem !default;
-$font-weight-normal: normal !default;
-$font-weight-bold: bold !default;
-$font-weight-base: $font-weight-normal !default;
-$line-height-base: 1.5 !default;
-// pixels because breakpoints should be dependent on screen width, not font size
 
 
-// Breakpoints (@include media-breakpoint-up(sm))
-$grid-breakpoints: (
+
+
+$global-breakpoints: (
   'xs': 0,
   'sm': 576px,
   'md': 768px,
@@ -99,910 +86,695 @@ $grid-breakpoints: (
 ) !default;
 
 
-
-
-
-
-
-//
-// ASPECT RATIOS
-//
-// Example:
-//
-// <div class="aspect-ratio aspect-ratio--16x9">
-//  <iframe class="aspect-ratio--object"></iframe>
-// </div>
-//
-// aspect-ratio
-$aspect-ratio-breakpoints: (xs) !default;
-$aspect-ratio-shortcut: 'aspect-ratio' !default;
-$aspect-ratio-properties: (padding-bottom) !default;
-$aspect-ratio-modifiers: (
-    '16x9': 9/16 * 100%,
-    '9x16': 16/9 * 100%,
-    '4x3': 3/4 * 100%,
-    '3x4': 4/3 * 100%,
-    '6x4': 4/6 * 100%,
-    '4x6': 6/4 * 100%,
-    '8x5': 5/8 * 100%,
-    '5x8': 8/5 * 100%,
-    '7x5': 5/7 * 100%,
-    '5x7': 7/5 * 100%,
-    '1x1': 100%,
+$spacers: (
+  '1': 1rem,
+  '2': 1.618rem,
+  '3': 4.236rem,
+  '4': 6.854rem,
+  '5': 11.089rem,
+  '6': 17.942rem,
+  '7': 29.03rem,
+  '8': 46.971rem,
+  '9': 75.999rem,
+  'auto': auto,
 ) !default;
 
+$type-scale: (
+  '1': .79rem,
+  '2': .889rem,
+  '3': 1rem,
+  '4': 1.125rem,
+  '5': 1.266rem,
+  '6': 1.424rem,
+  '7': 1.602rem,
+  '8': 1.802rem,
+  '9': 2.027rem,
+  '10': 2.281rem,
+  '11': 2.566rem,
+  '12': 2.887rem,
+  '13': 3.247rem,
+  '14': 3.653rem,
+  '15': 4.11rem,
+  '16': 5.624rem,
+  '17': 5.202rem,
+);
+
+
+$shortcuts: (
+
+
+  // Layouts
+  'pos': (
+    'breakpoints': (xs),
+    'props': (position),
+    'mods': (
+      'static': static,
+      'relative': relative,
+      'absolute': absolute,
+      'fixed': fixed,
+    )
+  ),
+  't': (
+    'breakpoints': (xs),
+    'props': (top),
+    'mods': (
+      '0': 0,
+      'mobile-menu': -3px,
+    )
+  ),
+  'r': (
+    'breakpoints': (xs),
+    'props': (right),
+    'mods': (
+      '0': 0,
+      'mobile-menu': -3px,
+    )
+  ),
+  'b': (
+    'breakpoints': (xs),
+    'props': (bottom),
+    'mods': (
+      '0': 0,
+      'mobile-menu': -3px,
+    )
+  ),
+  'l': (
+    'breakpoints': (xs),
+    'props': (left),
+    'mods': (
+      '0': 0,
+      'mobile-menu': -3px,
+    )
+  ),
+  'fl': (
+    'breakpoints': (xs),
+    'props': (float),
+    'mods': (
+      'l': left,
+      'r': right,
+      'none': none,
+    )
+  ),
+  'c': (
+    'breakpoints': (xs),
+    'props': (clear),
+    'mods': (
+      'l': left,
+      'r': right,
+      'x': both,
+      'none': none,
+    )
+  ),
+
+  'd': (
+    'breakpoints': (xs),
+    'props': (display),
+    'mods': (
+      'none': none,
+      'inline': inline,
+      'inline-block': inline-block,
+      'block': block,
+      'table': table,
+      'table-cell': table-cell,
+      'flex': flex,
+      'inline-flex': inline-flex,
+    )
+  ),
+  'w': (
+    'breakpoints': (xs),
+    'props': (width),
+    'mods': (
+      '1': 1rem,
+      '2': 1.618rem,
+      '3': 4.236rem,
+      '4': 6.854rem,
+      '5': 11.089rem,
+      '6': 17.942rem,
+      '7': 29.03rem,
+      '8': 46.971rem,
+      '9': 75.999rem,
+      '10p': 10%,
+      '20p': 20%,
+      '25p': 25%,
+      '30p': 30%,
+      '33p': 33.33%,
+      '40p': 40%,
+      '50p': 50%,
+      '60p': 60%,
+      '66p': 66.66%,
+      '70p': 70%,
+      '75p': 75%,
+      '80p': 80%,
+      '90p': 90%,
+      '100p': 100%,
+    )
+  ),
+  'mw': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (max-width),
+    'mods': (
+      '1': 1rem,
+      '2': 1.618rem,
+      '3': 4.236rem,
+      '4': 6.854rem,
+      '5': 11.089rem,
+      '6': 17.942rem,
+      '7': 29.03rem,
+      '8': 46.971rem,
+      '9': 75.999rem,
+    )
+  ),
+  'h': (
+    'breakpoints': (xs),
+    'props': (height),
+    'mods': (
+      '1': 1rem,
+      '2': 1.618rem,
+      '3': 4.236rem,
+      '4': 6.854rem,
+      '5': 11.089rem,
+      '6': 17.942rem,
+      '7': 29.03rem,
+      '8': 46.971rem,
+      '9': 75.999rem,
+      '10p': 10%,
+      '20p': 20%,
+      '25p': 25%,
+      '30p': 30%,
+      '33p': 33.33%,
+      '40p': 40%,
+      '50p': 50%,
+      '60p': 60%,
+      '66p': 66.66%,
+      '70p': 70%,
+      '75p': 75%,
+      '80p': 80%,
+      '90p': 90%,
+      '100p': 100%,
+      '10vh': 10vh,
+      '20vh': 20vh,
+      '25vh': 25vh,
+      '30vh': 30vh,
+      '33vh': 33.33vh,
+      '40vh': 40vh,
+      '50vh': 50vh,
+      '60vh': 60vh,
+      '66vh': 66.66vh,
+      '70vh': 70vh,
+      '75vh': 75vh,
+      '80vh': 80vh,
+      '90vh': 90vh,
+      '100vh': 100vh,
+    )
+  ),
+  'p': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (padding),
+    'mods': $spacers,
+  ),
+  'px': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (padding-right, padding-left),
+    'mods': $spacers,
+  ),
+  'py': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (padding-top, padding-bottom),
+    'mods': $spacers,
+  ),
+  'pt': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (padding-top),
+    'mods': $spacers,
+  ),
+  'pr': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (padding-right),
+    'mods': $spacers,
+  ),
+  'pb': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (padding-bottom),
+    'mods': $spacers,
+  ),
+  'pl': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (padding-left),
+    'mods': $spacers,
+  ),
+  'm': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (margin),
+    'mods': $spacers,
+  ),
+  'mx': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (margin-right, margin-left),
+    'mods': $spacers,
+  ),
+  'my': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (margin-top, margin-bottom),
+    'mods': $spacers,
+  ),
+  'mt': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (margin-top),
+    'mods': $spacers,
+  ),
+  'mr': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (margin-right),
+    'mods': $spacers,
+  ),
+  'mb': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (margin-bottom),
+    'mods': $spacers,
+  ),
+  'ml': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (margin-left),
+    'mods': $spacers,
+  ),
+
+
+  'fbd': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (flex-direction),
+    'mods': (
+      'row': row,
+      'col': column,
+      'row-reverse': row-reverse,
+      'col-reverse': column-reverse,
+    ),
+  ),
+  'fbw': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (flex-wrap),
+    'mods': (
+      'wrap': wrap,
+      'nowrap': nowrap,
+      'wrap-reverse': wrap-reverse,
+    ),
+  ),
+  'fbjc': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (justify-content),
+    'mods': (
+      'start': flex-start,
+      'end': flex-end,
+      'center': center,
+      'between': space-between,
+      'around': space-around,
+    ),
+  ),
+  'fbai': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (align-items),
+    'mods': (
+      'start': flex-start,
+      'end': flex-end,
+      'center': center,
+      'baseline': baseline,
+      'stretch': stretch,
+    ),
+  ),
+  'fbac': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (align-content),
+    'mods': (
+      'start': flex-start,
+      'end': flex-end,
+      'center': center,
+      'between': space-between,
+      'around': space-around,
+      'stretch': stretch,
+    ),
+  ),
+  'fbas': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (align-self),
+    'mods': (
+      'auto': auto,
+      'start': flex-start,
+      'end': flex-end,
+      'center': center,
+      'around': space-around,
+      'stretch': stretch,
+    ),
+  ),
+  'fbo': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (order),
+    'mods': (
+      '0': 0,
+      '1': 1,
+      '2': 2,
+      '3': 3,
+      '4': 4,
+      '5': 5,
+      '6': 6,
+      '7': 7,
+      '8': 8,
+      '9': 9,
+      'first': -9999,
+      'last': 9999,
+    ),
+  ),
+  'fbg': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (flex-grow),
+    'mods': (
+      '0': 0,
+      '1': 1,
+      '2': 2,
+      '3': 3,
+      '4': 4,
+      '5': 5,
+    ),
+  ),
+  'fbs': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (flex-shrink),
+    'mods': (
+      '0': 0,
+      '1': 1,
+      '2': 2,
+      '3': 3,
+      '4': 4,
+      '5': 5,
+    ),
+  ),
+
+
+
+  // Theming
+  '': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (color),
+    'mods': $colors,
+  ),
+  'bg': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (background-color),
+    'mods': $colors,
+  ),
+  'o': (
+    'breakpoints': (xs),
+    'props': (opacity),
+    'mods': (
+      '0': 0,
+      '3p': .03,
+      '5p': .05,
+      '10p': .1,
+      '20p': .2,
+      '30p': .3,
+      '40p': .4,
+      '50p': .5,
+      '60p': .6,
+      '70p': .7,
+      '80p': .8,
+      '90p': .9,
+      '100p': 1,
+    )
+  ),
+
+  'bc': (
+    'breakpoints': (xs),
+    'props': (border-color),
+    'mods': $colors,
+  ),
+  'bs': (
+    'breakpoints': (xs),
+    'props': (border-style),
+    'mods': (
+      'dotted': dotted,
+      'dashed': dashed,
+      'solid': solid,
+      'rm': none,
+    )
+  ),
+  'bw': (
+    'breakpoints': (xs),
+    'props': (border-width),
+    'mods': (
+      '0': 0,
+      '1': .125rem,
+      '2': .25rem,
+      '3': .5rem,
+      '4': 1rem,
+      '5': 2rem,
+    )
+  ),
+  'br': (
+    'breakpoints': (xs),
+    'props': (border-radius),
+    'mods': (
+      '0': 0,
+      '1': .125rem,
+      '2': .25rem,
+      '3': .5rem,
+      '4': 1rem,
+      '100p': 100%,
+      'pill': 9999px,
+    )
+  ),
+
+  'bg-size': (
+    'breakpoints': (xs),
+    'props': (background-size),
+    'mods': (
+      'cover': cover,
+      'contain': contain,
+    )
+  ),
+
+  'shadow': (
+    'breakpoints': (xs),
+    'props': (box-shadow),
+    'mods': (
+      '1': (0px 0px 4px 2px rgba( 0, 0, 0, 0.2 )),
+      '2': (0px 0px 8px 2px rgba( 0, 0, 0, 0.2 )),
+      '3': (2px 2px 4px 2px rgba( 0, 0, 0, 0.2 )),
+      '4': (2px 2px 8px 0px rgba( 0, 0, 0, 0.2 )),
+      '5': (4px 4px 8px 0px rgba( 0, 0, 0, 0.2 )),
+    )
+  ),
+
+  'transition': (
+    'breakpoints': (xs),
+    'props': (transition),
+    'mods': (
+      '1': all .3s ease-in,
+    )
+  ),
+
+  'hover': (
+    'breakpoints': (xs),
+    'props': (color),
+    'mods': (
+      'red:hover': darken(map-get($colors, 'red'), 10%),
+    )
+  ),
+  'focus': (
+    'breakpoints': (xs),
+    'props': (color),
+    'mods': (
+      'red:hover': darken(map-get($colors, 'red'), 10%),
+    )
+  ),
+  'active': (
+    'breakpoints': (xs),
+    'props': (color),
+    'mods': (
+      'red:hover': darken(map-get($colors, 'red'), 10%),
+    )
+  ),
+  'visited': (
+    'breakpoints': (xs),
+    'props': (color),
+    'mods': (
+      'red:hover': darken(map-get($colors, 'red'), 10%),
+    )
+  ),
+
+  'hover-bg': (
+    'breakpoints': (xs),
+    'props': (background-color),
+    'mods': (
+      'red:hover': darken(map-get($colors, 'red'), 10%),
+    )
+  ),
+  'focus-bg': (
+    'breakpoints': (xs),
+    'props': (background-color),
+    'mods': (
+      'red:hover': darken(map-get($colors, 'red'), 10%),
+    )
+  ),
+  'active-bg': (
+    'breakpoints': (xs),
+    'props': (background-color),
+    'mods': (
+      'red:hover': darken(map-get($colors, 'red'), 10%),
+    )
+  ),
+  'visited-bg': (
+    'breakpoints': (xs),
+    'props': (background-color),
+    'mods': (
+      'red:hover': darken(map-get($colors, 'red'), 10%),
+    )
+  ),
+
+
+  // TYPOGRAPHY
+  'f': (
+    'breakpoints': (xs),
+    'props': (font-size),
+    'mods': $type-scale,
+  ),
+  'lh': (
+    'breakpoints': (xs),
+    'props': (line-height),
+    'mods': (
+      '0': 1,
+      '1': 1.25,
+      '2': 1.5,
+    ),
+  ),
+  'ls': (
+    'breakpoints': (xs),
+    'props': (letter-spacing),
+    'mods': (
+      '0': 0,
+      '1': .1em,
+      '2': .25em,
+    ),
+  ),
+  'fw': (
+    'breakpoints': (xs),
+    'props': (font-weight),
+    'mods': (
+      '1': 100,
+      '2': 200,
+      '3': 300,
+      '4': 400,
+      '5': 500,
+      '6': 600,
+      '7': 700,
+      '8': 800,
+      '9': 900,
+    ),
+  ),
+  'fs': (
+    'breakpoints': (xs),
+    'props': (font-style),
+    'mods': (
+      'rm': normal,
+      'i': italic,
+    ),
+  ),
+  'v': (
+    'breakpoints': (xs),
+    'props': (vertical-align),
+    'mods': (
+      'base': baseline,
+      'mid': middle,
+      'top': top,
+      'bot': bottom,
+    ),
+  ),
+  'tt': (
+    'breakpoints': (xs),
+    'props': (text-transform),
+    'mods': (
+      'c': capitalize,
+      'l': lowercase,
+      'u': uppercase,
+      'rm': none,
+    ),
+  ),
+  'ws': (
+    'breakpoints': (xs),
+    'props': (white-space),
+    'mods': (
+      'pre': pre,
+      'nowrap': nowrap,
+      'rm': normal,
+    ),
+  ),
+  'ff': (
+    'breakpoints': (xs),
+    'props': (font-family),
+    'mods': (
+      'ss-system': (apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif),
+      's-system': (Georgia, "Times New Roman", Times, serif),
+      'm-system': (Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace),
+    ),
+  ),
 
-
-
-//
-// BORDER
-//
-
-// border-style
-// b
-$border-style-breakpoints: (xs) !default;
-$border-style-shortcut: 'b' !default;
-$border-style-properties: (border-style) !default;
-$border-style-modifiers: (
-    'dotted': dotted,
-    'dashed': dashed,
-    'solid': solid,
-    'none': none,
-) !default;
-
-
-// border-color
-// b
-$border-color-breakpoints: (xs) !default;
-$border-color-shortcut: 'b' !default;
-$border-color-properties: (border-color) !default;
-$border-color-modifiers: $colors !default;
-
-
-
-// border-width
-$border-width-common-breakpoints: (xs) !default;
-$border-common-modifiers: (
-    '0': 0,
-    '1': .125rem,
-    '2': .25rem,
-    '3': .5rem,
-    '4': 1rem,
-    '5': 2rem,
-) !default;
-
-// bw
-$border-width-breakpoints: $border-width-common-breakpoints !default;
-$border-width-shortcut: 'bw' !default;
-$border-width-properties: (border-width) !default;
-$border-width-modifiers: $border-common-modifiers !default;
-
-// bwt
-$border-width-top-breakpoints: $border-width-common-breakpoints !default;
-$border-width-top-shortcut: 'bwt' !default;
-$border-width-top-properties: (border-top-width) !default;
-$border-width-top-modifiers: $border-common-modifiers !default;
-
-// bwr
-$border-width-right-breakpoints: $border-width-common-breakpoints !default;
-$border-width-right-shortcut: 'bwr' !default;
-$border-width-right-properties: (border-right-width) !default;
-$border-width-right-modifiers: $border-common-modifiers !default;
-
-// bwb
-$border-width-bottom-breakpoints: $border-width-common-breakpoints !default;
-$border-width-bottom-shortcut: 'bwb' !default;
-$border-width-bottom-properties: (border-bottom-width) !default;
-$border-width-bottom-modifiers: $border-common-modifiers !default;
-
-// bwl
-$border-width-left-breakpoints: $border-width-common-breakpoints !default;
-$border-width-left-shortcut: 'bwl' !default;
-$border-width-left-properties: (border-left-width) !default;
-$border-width-left-modifiers: $border-common-modifiers !default;
-
-
-
-// border-radius
-// when each direction has its own modifier values, separate them out individually (as shown below)
-$border-radius-common-breakpoints: (xs) !default;
-$border-radius-common-modifiers: (
-    '0': 0,
-    '1': .125rem,
-    '2': .25rem,
-    '3': .5rem,
-    '4': 1rem,
-    '100': 100%,
-    'pill': 9999px,
-) !default;
-
-// br
-$border-radius-breakpoints: $border-radius-common-breakpoints !default;
-$border-radius-shortcut: 'br' !default;
-$border-radius-properties: (border-radius) !default;
-$border-radius-modifiers: $border-radius-common-modifiers !default;
-
-// brt
-$border-radius-top-breakpoints: $border-radius-common-breakpoints !default;
-$border-radius-top-shortcut: 'brt' !default;
-$border-radius-top-properties: (border-top-left-radius, border-top-right-radius) !default;
-$border-radius-top-modifiers: $border-radius-common-modifiers !default;
-
-// brt
-$border-radius-right-breakpoints: $border-radius-common-breakpoints !default;
-$border-radius-right-shortcut: 'brr' !default;
-$border-radius-right-properties: (border-top-right-radius, border-bottom-right-radius) !default;
-$border-radius-right-modifiers: $border-radius-common-modifiers !default;
-
-// brb
-$border-radius-bottom-breakpoints: $border-radius-common-breakpoints !default;
-$border-radius-bottom-shortcut: 'brb' !default;
-$border-radius-bottom-properties: (border-bottom-right-radius, border-bottom-left-radius) !default;
-$border-radius-bottom-modifiers: $border-radius-common-modifiers !default;
-
-// brl
-$border-radius-left-breakpoints: $border-radius-common-breakpoints !default;
-$border-radius-left-shortcut: 'brl' !default;
-$border-radius-left-properties: (border-top-left-radius, border-bottom-left-radius) !default;
-$border-radius-left-modifiers: $border-radius-common-modifiers !default;
-
-// brtl
-$border-radius-top-left-breakpoints: $border-radius-common-breakpoints !default;
-$border-radius-top-left-shortcut: 'brtl' !default;
-$border-radius-top-left-properties: (border-top-left-radius) !default;
-$border-radius-top-left-modifiers: $border-radius-common-modifiers !default;
-
-// brtr
-$border-radius-top-right-breakpoints: $border-radius-common-breakpoints !default;
-$border-radius-top-right-shortcut: 'brtr' !default;
-$border-radius-top-right-properties: (border-top-right-radius) !default;
-$border-radius-top-right-modifiers: $border-radius-common-modifiers !default;
-
-// brbr
-$border-radius-bottom-right-breakpoints: $border-radius-common-breakpoints !default;
-$border-radius-bottom-right-shortcut: 'brbr' !default;
-$border-radius-bottom-right-properties: (border-bottom-right-radius) !default;
-$border-radius-bottom-right-modifiers: $border-radius-common-modifiers !default;
-
-// brbl
-$border-radius-bottom-left-breakpoints: $border-radius-common-breakpoints !default;
-$border-radius-bottom-left-shortcut: 'brbl' !default;
-$border-radius-bottom-left-properties: (border-bottom-left-radius) !default;
-$border-radius-bottom-left-modifiers: $border-radius-common-modifiers !default;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-// BOX SHADOW
-//
-$box-shadow-breakpoints: (xs) !default;
-$box-shadow-shortcut: 'shadow' !default;
-$box-shadow-properties: (box-shadow) !default;
-$box-shadow-modifiers: (
-    '1': (0px 0px 4px 2px rgba( 0, 0, 0, 0.2 )),
-    '2': (0px 0px 8px 2px rgba( 0, 0, 0, 0.2 )),
-    '3': (2px 2px 4px 2px rgba( 0, 0, 0, 0.2 )),
-    '4': (2px 2px 8px 0px rgba( 0, 0, 0, 0.2 )),
-    '5': (4px 4px 8px 0px rgba( 0, 0, 0, 0.2 )),
-) !default;
-
-//
-// CLEAR
-//
-$clear-breakpoints: (xs) !default;
-$clear-shortcut: 'cf' !default;
-$clear-properties: (clear) !default;
-$clear-modifiers: (
-    'l': left,
-    'r': right,
-    'x': both,
-    'none': none,
-) !default;
-
-//
-// COLOR
-//
-$color-breakpoints: (xs) !default;
-$color-shortcut: 'c' !default;
-$color-properties: (color) !default;
-$color-modifiers: $colors !default;
-
-$background-color-breakpoints: (xs) !default;
-$background-color-shortcut: 'bg' !default;
-$background-color-properties: (background-color) !default;
-$background-color-modifiers: $colors !default;
-
-$opacity-breakpoints: (xs) !default;
-$opacity-shortcut: 'o' !default;
-$opacity-properties: (opacity) !default;
-$opacity-modifiers: (
-    '0': 0,
-    '025p': .025,
-    '05p': .05,
-    '10p': .1,
-    '20p': .2,
-    '30p': .3,
-    '40p': .4,
-    '50p': .5,
-    '60p': .6,
-    '70p': .7,
-    '80p': .8,
-    '90p': .9,
-    '100p': 1,
-) !default;
-
-
-// put all this into a map? it can resolve conflicts, and no adding to _classes.scss is needed
-
-
-//
-// COORDINATES
-//
-$coordinate-common-breakpoints: (xs) !default;
-$coordinate-common-modifiers: (
-    'n2': -2rem,
-    'n1': -1rem,
-    '0': 0,
-    '1': 1rem,
-    '2': 2rem,
-    '3': 3rem,
-) !default;
-
-// t
-$coordinate-top-breakpoints: $coordinate-common-breakpoints !default;
-$coordinate-top-shortcut: 't' !default;
-$coordinate-top-properties: (top) !default;
-$coordinate-top-modifiers: $coordinate-common-modifiers !default;
-
-// r
-$coordinate-right-breakpoints: $coordinate-common-breakpoints !default;
-$coordinate-right-shortcut: 'r' !default;
-$coordinate-right-properties: (right) !default;
-$coordinate-right-modifiers: $coordinate-common-modifiers !default;
-
-// b
-$coordinate-bottom-breakpoints: $coordinate-common-breakpoints !default;
-$coordinate-bottom-shortcut: 'b' !default;
-$coordinate-bottom-properties: (bottom) !default;
-$coordinate-bottom-modifiers: $coordinate-common-modifiers !default;
-
-// l
-$coordinate-left-breakpoints: $coordinate-common-breakpoints !default;
-$coordinate-left-shortcut: 'l' !default;
-$coordinate-left-properties: (left) !default;
-$coordinate-left-modifiers: $coordinate-common-modifiers !default;
-
-
-
-//
-// DISPLAY
-//
-$display-breakpoints: (xs) !default;
-$display-shortcut: 'd' !default;
-$display-properties: (display) !default;
-$display-modifiers: (
-    'none': none,
-    'inline': inline,
-    'inline-block': inline-block,
-    'block': block,
-    'table': table,
-    'table-cell': table-cell,
-    'flex': flex,
-    'inline-flex': inline-flex,
-) !default;
-
-
-//
-// FLEXBOX
-//
-
-// flex-direction
-$flex-direction-breakpoints: (xs, sm, md, lg) !default;
-$flex-direction-shortcut: 'flex' !default;
-$flex-direction-properties: (flex-direction) !default;
-$flex-direction-modifiers: (
-    'row': row,
-    'col': column,
-    'row-reverse': row-reverse,
-    'col-reverse': column-reverse,
-) !default;
-
-// flex-wrap
-$flex-wrap-breakpoints: (xs, sm, md, lg) !default;
-$flex-wrap-shortcut: 'flex' !default;
-$flex-wrap-properties: (flex-wrap) !default;
-$flex-wrap-modifiers: (
-    'wrap': wrap,
-    'nowrap': nowrap,
-    'wrap-reverse': wrap-reverse,
-) !default;
-
-// justify-content
-$flex-justify-content-breakpoints: (xs, sm, md, lg) !default;
-$flex-justify-content-shortcut: 'flex-jc' !default;
-$flex-justify-content-properties: (justify-content) !default;
-$flex-justify-content-modifiers: (
-    'start': flex-start,
-    'end': flex-end,
-    'center': center,
-    'between': space-between,
-    'around': space-around,
-) !default;
-
-// align-items
-$flex-align-items-breakpoints: (xs, sm, md, lg) !default;
-$flex-align-items-shortcut: 'flex-ai' !default;
-$flex-align-items-properties: (align-items) !default;
-$flex-align-items-modifiers: (
-    'start': flex-start,
-    'end': flex-end,
-    'center': center,
-    'baseline': baseline,
-    'stretch': stretch,
-) !default;
-
-// align-content
-$flex-align-content-breakpoints: (xs, sm, md, lg) !default;
-$flex-align-content-shortcut: 'flex-ac' !default;
-$flex-align-content-properties: (align-content) !default;
-$flex-align-content-modifiers: (
-    'start': flex-start,
-    'end': flex-end,
-    'center': center,
-    'between': space-between,
-    'around': space-around,
-    'stretch': stretch,
-) !default;
-
-// align-self
-$flex-align-self-breakpoints: (xs, sm, md, lg) !default;
-$flex-align-self-shortcut: 'flex-as' !default;
-$flex-align-self-properties: (align-self) !default;
-$flex-align-self-modifiers: (
-    'auto': auto,
-    'start': flex-start,
-    'end': flex-end,
-    'center': center,
-    'around': space-around,
-    'stretch': stretch,
-) !default;
-
-// order
-$flex-order-breakpoints: (xs) !default;
-$flex-order-shortcut: 'flex-o' !default;
-$flex-order-properties: (order) !default;
-$flex-order-modifiers: (
-    '0': 0,
-    '1': 1,
-    '2': 2,
-    '3': 3,
-    '4': 4,
-    '5': 5,
-    '6': 6,
-    '7': 7,
-    '8': 8,
-    '9': 9,
-    'first': -9999,
-    'last': 9999,
-) !default;
-
-// grow
-$flex-grow-breakpoints: (xs) !default;
-$flex-grow-shortcut: 'flex-g' !default;
-$flex-grow-properties: (flex-grow) !default;
-$flex-grow-modifiers: (
-    'inherit': inherit,
-    'initial': initial,
-    'unset': unset,
-    '0': 0,
-    '1': 1,
-    '2': 2,
-    '3': 3,
-    '4': 4,
-) !default;
-
-// shrink
-$flex-shrink-breakpoints: (xs) !default;
-$flex-shrink-shortcut: 'flex-s' !default;
-$flex-shrink-properties: (flex-shrink) !default;
-$flex-shrink-modifiers: (
-    'inherit': inherit,
-    'initial': initial,
-    'unset': unset,
-    '0': 0,
-    '1': 1,
-) !default;
-
-//
-// FLOAT
-//
-$float-breakpoints: (xs) !default;
-$float-shortcut: 'fl' !default;
-$float-properties: (float) !default;
-$float-modifiers: (
-    'l': left,
-    'right': right,
-    'none': none,
-) !default;
-
-
-
-// position
-$position-breakpoints: (xs) !default;
-$position-shortcut: 'pos' !default;
-$position-properties: (position) !default;
-$position-modifiers: (
-    'static': static,
-    'relative': relative,
-    'absolute': absolute,
-    'fixed': fixed,
-) !default;
-
-// rotate
-$rotate-breakpoints: (xs) !default;
-$rotate-shortcut: 'rotate' !default;
-$rotate-properties: (transform) !default;
-$rotate-modifiers: (
-    'n180': rotate(-180deg),
-    'n135': rotate(-135deg),
-    'n90': rotate(-90deg),
-    'n45': rotate(-45deg),
-    '0': rotate(0deg),
-    '45': rotate(45deg),
-    '90': rotate(90deg),
-    '135': rotate(135deg),
-    '180': rotate(180deg),
-    '225': rotate(225deg),
-    '270': rotate(270deg),
-    '315': rotate(315deg),
-) !default;
-
-
-
-
-// Size
-$width-common-breakpoints: (xs) !default;
-$width-common-modifiers: (
-    '1': 1rem,
-    '2': 2rem,
-    '3': 4rem,
-    '4': 8rem,
-    '5': 16rem,
-    '10p': 10%,
-    '20p': 20%,
-    '25p': 25%,
-    '30p': 30%,
-    '33p': 33.33%,
-    '40p': 40%,
-    '50p': 50%,
-    '60p': 60%,
-    '66p': 66.66%,
-    '70p': 70%,
-    '75p': 75%,
-    '80p': 80%,
-    '90p': 90%,
-    '100p': 100%,
-    'auto': auto,
-    'inherit': inherit,
-) !default;
-
-
-
-// width
-$width-breakpoints: $width-common-breakpoints !default;
-$width-shortcut: 'w' !default;
-$width-properties: (width) !default;
-$width-modifiers: $width-common-modifiers !default;
-
-// min-width
-$width-min-breakpoints: $width-common-breakpoints !default;
-$width-min-shortcut: 'wmin' !default;
-$width-min-properties: (min-width) !default;
-$width-min-modifiers: $width-common-modifiers !default;
-
-// max-width
-$width-max-breakpoints: (xs, sm, md, lg);
-$width-max-shortcut: 'wmax' !default;
-$width-max-properties: (max-width) !default;
-$width-max-modifiers: (
-    '1': 1rem,
-    '2': 2rem,
-    '3': 4rem,
-    '4': 8rem,
-    '5': 16rem,
-    '6': 32rem,
-    '7': 48rem,
-    '8': 64rem,
-    '9': 96rem,
-) !default;
-
-
-$height-common-breakpoints: (xs) !default;
-$height-common-modifiers: (
-    '1': 1rem,
-    '2': 2rem,
-    '3': 4rem,
-    '4': 8rem,
-    '5': 16rem,
-    '25p': 25%,
-    '50p': 50%,
-    '75p': 75%,
-    '100p': 100%,
-    '25vh': 25vh,
-    '50vh': 50vh,
-    '75vh': 75vh,
-    '100vh': 100vh,
-    'auto': auto,
-    'inherit': inherit,
-) !default;
-
-// height
-$height-breakpoints: $height-common-breakpoints !default;
-$height-shortcut: 'h' !default;
-$height-properties: (height) !default;
-$height-modifiers: $height-common-modifiers !default;
-
-// min-height
-$height-min-breakpoints: $height-common-breakpoints !default;
-$height-min-shortcut: 'hmin' !default;
-$height-min-properties: (min-height) !default;
-$height-min-modifiers: $height-common-modifiers !default;
-
-// max-height
-$height-max-breakpoints: $height-common-breakpoints !default;
-$height-max-shortcut: 'hmax' !default;
-$height-max-properties: (max-height) !default;
-$height-max-modifiers: $height-common-modifiers !default;
-
-
-
-
-
-// SPACING
-$spacing-common-breakpoints: (xs, sm, md, lg) !default;
-$spacing-common-modifiers: (
-    '0': 0,
-    '1': .25rem,
-    '2': .5rem,
-    '3': 1rem,
-    '4': 2rem,
-    '5': 4rem,
-    '6': 8rem,
-    '7': 16rem,
-    '8': 24rem,
-    '9': 32rem,
-) !default;
-
-
-
-// padding
-$padding-breakpoints: $spacing-common-breakpoints !default;
-$padding-shortcut: 'p' !default;
-$padding-properties: (padding) !default;
-$padding-modifiers: $spacing-common-modifiers !default;
-
-// px
-$padding-x-breakpoints: $spacing-common-breakpoints !default;
-$padding-x-shortcut: 'px' !default;
-$padding-x-properties: (padding-left, padding-right) !default;
-$padding-x-modifiers: $spacing-common-modifiers !default;
-
-// py
-$padding-y-breakpoints: $spacing-common-breakpoints !default;
-$padding-y-shortcut: 'py' !default;
-$padding-y-properties: (padding-top, padding-bottom) !default;
-$padding-y-modifiers: $spacing-common-modifiers !default;
-
-// pt
-$padding-top-breakpoints: $spacing-common-breakpoints !default;
-$padding-top-shortcut: 'pt' !default;
-$padding-top-properties: (padding-top) !default;
-$padding-top-modifiers: $spacing-common-modifiers !default;
-
-// pr
-$padding-right-breakpoints: $spacing-common-breakpoints !default;
-$padding-right-shortcut: 'pr' !default;
-$padding-right-properties: (padding-right) !default;
-$padding-right-modifiers: $spacing-common-modifiers !default;
-
-// pb
-$padding-bottom-breakpoints: $spacing-common-breakpoints !default;
-$padding-bottom-shortcut: 'pb' !default;
-$padding-bottom-properties: (padding-bottom) !default;
-$padding-bottom-modifiers: $spacing-common-modifiers !default;
-
-// pl
-$padding-left-breakpoints: $spacing-common-breakpoints !default;
-$padding-left-shortcut: 'pl' !default;
-$padding-left-properties: (padding-left) !default;
-$padding-left-modifiers: $spacing-common-modifiers !default;
-
-
-
-// margin
-$margin-breakpoints: $spacing-common-breakpoints !default;
-$margin-shortcut: 'm' !default;
-$margin-properties: (margin) !default;
-$margin-modifiers: $spacing-common-modifiers !default;
-
-// mx
-$margin-x-breakpoints: $spacing-common-breakpoints !default;
-$margin-x-shortcut: 'mx' !default;
-$margin-x-properties: (margin-left, margin-right) !default;
-$margin-x-modifiers: map-merge($spacing-common-modifiers, (
-    'auto': auto,
-)) !default;
-
-// my
-$margin-y-breakpoints: $spacing-common-breakpoints !default;
-$margin-y-shortcut: 'my' !default;
-$margin-y-properties: (margin-top, margin-bottom) !default;
-$margin-y-modifiers: $spacing-common-modifiers !default;
-
-// mt
-$margin-top-breakpoints: $spacing-common-breakpoints !default;
-$margin-top-shortcut: 'mt' !default;
-$margin-top-properties: (margin-top) !default;
-$margin-top-modifiers: $spacing-common-modifiers !default;
-
-// mr
-$margin-right-breakpoints: $spacing-common-breakpoints !default;
-$margin-right-shortcut: 'mr' !default;
-$margin-right-properties: (margin-right) !default;
-$margin-right-modifiers: $spacing-common-modifiers !default;
-
-// mb
-$margin-bottom-breakpoints: $spacing-common-breakpoints !default;
-$margin-bottom-shortcut: 'mb' !default;
-$margin-bottom-properties: (margin-bottom) !default;
-$margin-bottom-modifiers: $spacing-common-modifiers !default;
-
-// ml
-$margin-left-breakpoints: $spacing-common-breakpoints !default;
-$margin-left-shortcut: 'ml' !default;
-$margin-left-properties: (margin-left) !default;
-$margin-left-modifiers: $spacing-common-modifiers !default;
-
-
-
-
-
-
-//
-// TYPE
-//
-
-
-// ffss
-$font-family-sans-serif-breakpoints: (xs) !default;
-$font-family-sans-serif-shortcut: 'font-fam-ss' !default;
-$font-family-sans-serif-properties: (font-family) !default;
-$font-family-sans-serif-modifiers: (
-    'system': (apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif),
-) !default;
-
-// ffs
-$font-family-serif-breakpoints: (xs) !default;
-$font-family-serif-shortcut: 'font-fam-s' !default;
-$font-family-serif-properties: (font-family) !default;
-$font-family-serif-modifiers: (
-    'system': (Georgia, "Times New Roman", Times, serif),
-) !default;
-
-// ffm
-$font-family-monospace-breakpoints: (xs) !default;
-$font-family-monospace-shortcut: 'font-fam-m' !default;
-$font-family-monospace-properties: (font-family) !default;
-$font-family-monospace-modifiers: (
-    'system': (Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace),
-) !default;
-
-// fs
-$font-style-breakpoints: (xs) !default;
-$font-style-shortcut: 'font-style' !default;
-$font-style-properties: (font-style) !default;
-$font-style-modifiers: (
-    'italic': italic,
-    'normal': normal,
-) !default;
-
-// fs
-$font-size-breakpoints: (xs) !default;
-$font-size-shortcut: 'font-size' !default;
-$font-size-properties: (font-size) !default;
-$font-size-modifiers: (
-    '1': .75rem,
-    '2': .875rem,
-    '3': 1rem,
-    '4': 1.25rem,
-    '5': 2.25rem,
-    '6': 3rem,
-    '7': 4rem,
-    '8': 5rem,
-    '9': 6rem,
-) !default;
-
-// fw
-$font-weight-breakpoints: (xs) !default;
-$font-weight-shortcut: 'font-weight' !default;
-$font-weight-properties: (font-weight) !default;
-$font-weight-modifiers: (
-    '100': 100,
-    '200': 200,
-    '300': 300,
-    '400': 400,
-    '500': 500,
-    '600': 600,
-    '700': 700,
-    '800': 800,
-    '900': 900,
-) !default;
-
-// letter spacing
-$letter-spacing-breakpoints: (xs) !default;
-$letter-spacing-shortcut: 'ls' !default;
-$letter-spacing-properties: (letter-spacing) !default;
-$letter-spacing-modifiers: (
-    'tracked': .1em,
-    'tight': -.05em,
-    'mega': .25em,
-) !default;
-
-// line height
-$line-height-breakpoints: (xs) !default;
-$line-height-shortcut: 'lh' !default;
-$line-height-properties: (line-height) !default;
-$line-height-modifiers: (
-    'solid': 1,
-    'title': 1.25,
-    'copy': 1.5,
-) !default;
-
-// line height rem
-$line-height-rem-breakpoints: (xs) !default;
-$line-height-rem-shortcut: 'lhr' !default;
-$line-height-rem-properties: (line-height) !default;
-$line-height-rem-modifiers: (
-    '0': 0,
-    '1': .25rem,
-    '2': .5rem,
-    '3': 1rem,
-    '4': 2rem,
-    '5': 4rem,
-    '6': 8rem,
-    '7': 16rem,
-    '8': 24rem,
-    '9': 32rem,
-) !default;
-
-// text
-$text-align-breakpoints: (xs) !default;
-$text-align-shortcut: 'text-align' !default;
-$text-align-properties: (text-align) !default;
-$text-align-modifiers: (
-    'justify': justify,
-    'l': left,
-    'r': right,
-    'center': center,
-) !default;
-
-// text decoration
-$text-decoration-breakpoints: (xs) !default;
-$text-decoration-shortcut: 'text-decor' !default;
-$text-decoration-properties: (text-decoration) !default;
-$text-decoration-modifiers: (
-    'strike': line-through,
-    'underline': underline,
-    'none': none,
-) !default;
-
-// text transformation
-$text-transformation-breakpoints: (xs) !default;
-$text-transformation-shortcut: 'text-transform' !default;
-$text-transformation-properties: (text-transformation) !default;
-$text-transformation-modifiers: (
-    'capitalize': capitalize,
-    'lowercase': lowercase,
-    'uppercase': uppercase,
-    'none': none,
-) !default;
-
-
-// white-space
-$white-space-breakpoints: (xs) !default;
-$white-space-shortcut: 'ws' !default;
-$white-space-properties: (white-space) !default;
-$white-space-modifiers: (
-    'nowrap': nowrap,
 ) !default;
 
 
 
 
 
-// vertical align
-$vertical-align-breakpoints: (xs) !default;
-$vertical-align-shortcut: 'vertical-align' !default;
-$vertical-align-properties: (vertical-align) !default;
-$vertical-align-modifiers: (
-    'baseline': baseline,
-    't': top,
-    'mid': middle,
-    'b': bottom,
-    'text-b': text-bottom,
-    'text-t': text-top,
-) !default;
 
 
-
-// overflow
-$overflow-common-breakpoints: (xs) !default;
-$overflow-common-modifiers: (
-    'visible': visible,
-    'hidden': hidden,
-    'scroll': scroll,
-    'auto': auto,
-) !default;
-
-$overflow-breakpoints: (xs) !default;
-$overflow-shortcut: 'overflow' !default;
-$overflow-properties: (overflow) !default;
-$overflow-modifiers: $overflow-common-breakpoints !default;
-
-// overflow-x
-$overflow-x-breakpoints: (xs) !default;
-$overflow-x-shortcut: 'overflow-x' !default;
-$overflow-x-properties: (overflow-x) !default;
-$overflow-x-modifiers: $overflow-common-breakpoints !default;
-
-// overflow-x
-$overflow-y-breakpoints: (xs) !default;
-$overflow-y-shortcut: 'list-style' !default;
-$overflow-y-properties: (overflow-y) !default;
-$overflow-y-modifiers: $overflow-common-breakpoints !default;
+@mixin breakpoint($name, $global-breakpoints: $global-breakpoints) {
+  $min-width: map-get($global-breakpoints, $name);
+  @if ($min-width == 0) {
+    @content;
+  } @else {
+    @media (min-width: $min-width) {
+      @content;
+    }
+  }
+}
 
 
+@function infix($s, $prevs...) {
+  // empty string
+  @if ($s == '') {
+    @return $s;
+  }
+  // if there's a string before, infix it
+  @each $prev in $prevs {
+    @if ($prev != '') {
+      @return '-#{$s}';
+    }
+  }
+  @return $s;
+}
 
 
-// list
-$list-style-breakpoints: (xs) !default;
-$list-style-shortcut: 'list-style' !default;
-$list-style-properties: (list-style) !default;
-$list-style-modifiers: (
-  'none': none,
-) !default;
+@mixin to-css($shortcuts, $global-breakpoints) {
+    @each $shortcut, $shortcut-vars in $shortcuts {
+        $breakpoints: map-get($shortcut-vars, 'breakpoints');
+        $props: map-get($shortcut-vars, 'props');
+        $mods: map-get($shortcut-vars, 'mods');
 
-
-
-
-
-//
-// STATES
-//
-// don't think about the relationship between the current property and this.
-// just think in terms of state and its color
-$color-state-breakpoints: (xs) !default;
-$color-state-shortcut: '' !default;
-$color-state-properties: (color) !default;
-$color-state-modifiers: (
-    'hover-lightblue:hover': lightblue,
-    'focus-lightblue:focus': lightblue,
-) !default;
+        @each $breakpoint in $breakpoints {
+            @include breakpoint($breakpoint) {
+                // $global-breakpoint: breakpoint-key($global-breakpoints, $global-breakpoint);
+                // $global-breakpoint: if($min-width == 0, '', $global-breakpoint);
+                // @debug $global-breakpoint;
+                // $global-breakpoint-infix: if($global-breakpoint == '', $breakpoint, infix($global-breakpoint, $shortcut));
+                // $global-breakpoint-infix: infix($global-breakpoint);
+                $breakpoint: if(map-get($global-breakpoints, $breakpoint) == 0, '', $breakpoint);
+                $breakpoint-infix: infix($breakpoint, $shortcut);
+                @each $mod, $val in $mods {
+                    $mod-infix: infix($mod, $shortcut, $breakpoint-infix);
+                    @each $prop in $props {
+                        .#{$shortcut}#{$breakpoint-infix}#{$mod-infix} { #{$prop}: #{$val}; }
+                    }
+                }
+            }
+        }
+    }
+}
+@include to-css($shortcuts, $global-breakpoints);
 
 
