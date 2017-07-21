@@ -8,7 +8,16 @@
   </url>
   
   <url>
-    <loc>/about/</loc>
+    <loc>/blog/first-post/</loc>
+  </url>
+  
+  <url>
+    <loc>/blog/second-post/</loc>
+  </url>
+  
+  <url>
+    <loc>/blog/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -17,21 +26,8 @@
   </url>
   
   <url>
-    <loc>/styleguide/components/images/</loc>
-  </url>
-  
-  <url>
-    <loc>/styleguide/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/styleguide/components/typography/</loc>
   </url>
   
 </urlset>

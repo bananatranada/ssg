@@ -32,6 +32,7 @@ module.exports = {
     }),
     new ManifestPlugin({
       fileName: 'assets-manifest.json',
+      publicPath: '/',
     }),
     new webpack.HotModuleReplacementPlugin(),
   ],
