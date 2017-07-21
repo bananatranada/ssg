@@ -1,13 +1,12 @@
 import path from 'path';
 import webpack from 'webpack';
 import ManifestPlugin from 'webpack-manifest-plugin';
-var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
-  entry: ['webpack-hot-middleware/client', './src/js/index.js'],
+  entry: './src/js/index.js',
   output: {
-    path: path.resolve('build'),
-    filename: 'static/assets/js/bundle.js',
+    path: path.resolve('hugo/static'),
+    filename: 'assets/js/bundle.js',
     publicPath: '/',
   },
   module: {
@@ -17,7 +16,6 @@ module.exports = {
         loader: 'babel-loader',
         test: /\.js?$/,
         exclude: /node_modules/,
-        query: { cacheDirectory: true },
       },
       {
         test: /\.scss$/,
@@ -31,9 +29,8 @@ module.exports = {
       fetch: 'imports?this=>global!exports?global.fetch!whatwg-fetch',
     }),
     new ManifestPlugin({
-      fileName: 'assets-manifest.json',
+      fileName: 'assets.json',
       publicPath: '/',
     }),
-    new webpack.HotModuleReplacementPlugin(),
   ],
 };

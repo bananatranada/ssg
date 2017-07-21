@@ -10,92 +10,65 @@ const $ = require('gulp-load-plugins')();
 const browserSync = require('browser-sync').create();
 const production = process.env.NODE_ENV === 'production';
 
-const webpackConfig = production
-  ? require('./webpack.config.prod.js')
-  : require('./webpack.config.dev.js');
-const compiler = webpack(webpackConfig);
-
 gulp.task('assets', done => runSequence('assets:clean', 'assets:build', done));
 gulp.task('assets:build', done => {
-  compiler.run((err, stats) => {
+  const webpackConfig = production
+    ? require('./webpack.config.prod.js')
+    : require('./webpack.config.dev.js');
+  webpack(webpackConfig, (err, stats) => {
     if (err) {
-      console.log(chalk.red('[assets:build]\n' + err));
+      $.log('[assets:build]', chalk.red(err));
       return done();
     }
     $.util.log('[webpack]', stats.toString({ colors: true, progress: true }));
     done();
   });
 });
-gulp.task('assets:clean', () =>
-  del(['build/static/assets/**', 'build/assets-manifest.json'])
-);
+gulp.task('assets:clean', () => del(['build/assets/**', 'build/assets.json']));
 
-gulp.task('public', done => runSequence('public:clean', 'public:build', done));
-gulp.task('public:build', () => {
-  return gulp.src('public/**/*').pipe($.imagemin()).pipe(gulp.dest('build'));
-});
-gulp.task('public:clean', () =>
-  del([
-    'build/static/**',
-    '!build/static',
-    '!build/static/assets',
-    'build/favicon.{ico,png}',
-  ])
-);
-
-// read build/asset-manifest.json after webpack finishes
+// Depends on assets tasks.
 gulp.task('hugo', done => runSequence('hugo:clean', 'hugo:build', done));
 gulp.task('hugo:build', done => {
-  const assets = require('./build/assets-manifest.json');
+  // Our hugo build requires asset paths produced by webpack. This is useful
+  // when they're appended by hashes for cache busting.
+  const assets = require('./hugo/static/assets.json');
+  // For production, discard drafts and future content.
   const args = production
-    ? ['-d', `${__dirname}/build`, '-s', 'src/hugo']
+    ? ['-d', `${__dirname}/build`, '-s', 'hugo']
     : [
         '-d',
         `${__dirname}/build`,
         '-s',
-        'src/hugo',
+        'hugo',
         '--buildDrafts',
         '--buildFuture',
       ];
-  fs.writeFile(
-    'src/hugo/data/assets.json',
-    JSON.stringify(assets),
-    'utf8',
-    err => {
-      if (err) {
-        $.util.log('[hugo:build]', chalk.red(err));
-        return done();
-      }
-      cprocess.spawn('hugo', args, { stdio: 'inherit' }).on('close', code => {
-        if (code === 0) {
-          if (!production) {
-            browserSync.reload();
-          }
-        } else {
-          $.util.log(
-            '[hugo:build]',
-            chalk.red('Unable to start hugo process. Code ' + code)
-          );
-        }
-        done();
-      });
+  // Inject assets to the data directory where hugo can pick up.
+  fs.writeFile('hugo/data/assets.json', JSON.stringify(assets), 'utf8', err => {
+    if (err) {
+      $.util.log('[hugo:build]', chalk.red(err));
+      return done();
     }
-  );
+    // Start hugo after asset injection.
+    cprocess.spawn('hugo', args, { stdio: 'inherit' }).on('close', code => {
+      if (code === 0) {
+        if (!production) {
+          browserSync.reload();
+        }
+      } else {
+        $.util.log(
+          '[hugo:build]',
+          chalk.red('Unable to start hugo process. Code ' + code)
+        );
+      }
+      done();
+    });
+  });
 });
-gulp.task('hugo:clean', () =>
-  del([
-    'build/**',
-    '!build',
-    '!build/static/**',
-    '!build/assets-manifest.json',
-    '!build/favicon.{ico,png}',
-  ])
-);
+gulp.task('hugo:clean', () => del(['build/**']));
 
 gulp.task('all', done => runSequence('all:clean', 'all:build', done));
-gulp.task('all:build', done =>
-  runSequence('public:build', 'assets:build', 'hugo:build', done)
-);
+gulp.task('all:build', done => runSequence('assets:build', 'hugo:build', done));
 gulp.task('all:clean', () => del(['build']));
 
 gulp.task('server', ['all'], () => {
@@ -105,15 +78,9 @@ gulp.task('server', ['all'], () => {
     },
     open: false,
     notify: false,
-    middleware: [
-      require('webpack-dev-middleware')(compiler, {
-        publicPath: webpackConfig.output.publicPath,
-        stats: { colors: true },
-      }),
-      require('webpack-hot-middleware')(compiler),
-    ],
   });
-
-  gulp.watch(['src/hugo/**/*.{json,md,html}'], ['hugo']);
-  gulp.watch(['public/**/*'], ['public']);
+  // Whenever we make a change in src directory, webpack's output
+  // to the hugo directory rebuilds hugo.
+  gulp.watch(['src/**/*'], ['assets']);
+  gulp.watch(['hugo/**/*', '!hugo/data/assets.json'], ['hugo']);
 });
