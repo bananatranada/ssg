@@ -87,6 +87,7 @@ $global-breakpoints: (
 
 
 $spacers: (
+  'n1': -1rem,
   '1': 1rem,
   '2': 1.618rem,
   '3': 4.236rem,
@@ -240,6 +241,7 @@ $shortcuts: (
       '5': 11.089rem,
       '6': 17.942rem,
       '7': 29.03rem,
+      'thirtytwo': 32rem,
       '8': 46.971rem,
       '9': 75.999rem,
     )
@@ -705,16 +707,28 @@ $shortcuts: (
       'rm': normal,
     ),
   ),
-  'ff': (
+  'ffss': (
     'breakpoints': (xs),
     'props': (font-family),
     'mods': (
-      'ss-system': (apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif),
-      's-system': (Georgia, "Times New Roman", Times, serif),
-      'm-system': (Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace),
+      'system': (apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif),
     ),
   ),
-
+  'ffs': (
+    'breakpoints': (xs),
+    'props': (font-family),
+    'mods': (
+      'system': (Georgia, "Times New Roman", Times, serif),
+      'merriweather': ('Merriweather', Georgia, 'Times New Roman', Times, serif),
+    ),
+  ),
+  'ffm': (
+    'breakpoints': (xs),
+    'props': (font-family),
+    'mods': (
+      'system': (Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace) !important,
+    ),
+  ),
 ) !default;
 
 

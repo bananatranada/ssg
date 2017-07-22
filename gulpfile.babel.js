@@ -8,13 +8,15 @@ import webpack from 'webpack';
 
 const $ = require('gulp-load-plugins')();
 const browserSync = require('browser-sync').create();
-const production = process.env.NODE_ENV === 'production';
+const PRODUCTION = process.env.NODE_ENV === 'production';
+const THEME = 'bk-blog';
 
 gulp.task('assets', done => runSequence('assets:clean', 'assets:build', done));
 gulp.task('assets:build', done => {
-  const webpackConfig = production
+  const configWebpack = PRODUCTION
     ? require('./webpack.config.prod.js')
     : require('./webpack.config.dev.js');
+  const webpackConfig = configWebpack(THEME);
   webpack(webpackConfig, (err, stats) => {
     if (err) {
       $.log('[assets:build]', chalk.red(err));
@@ -24,16 +26,21 @@ gulp.task('assets:build', done => {
     done();
   });
 });
-gulp.task('assets:clean', () => del(['build/assets/**', 'build/assets.json']));
+gulp.task('assets:clean', () =>
+  del([
+    `hugo/themes/${THEME}/static/assets/**`,
+    `hugo/themes/${THEME}/data/assets.json`,
+  ])
+);
 
 // Depends on assets tasks.
 gulp.task('hugo', done => runSequence('hugo:clean', 'hugo:build', done));
 gulp.task('hugo:build', done => {
   // Our hugo build requires asset paths produced by webpack. This is useful
   // when they're appended by hashes for cache busting.
-  const assets = require('./hugo/static/assets.json');
+  // const assets = require(`./hugo/themes/${THEME}/static/assets.json`);
   // For production, discard drafts and future content.
-  const args = production
+  const args = PRODUCTION
     ? ['-d', `${__dirname}/build`, '-s', 'hugo']
     : [
         '-d',
@@ -44,32 +51,39 @@ gulp.task('hugo:build', done => {
         '--buildFuture',
       ];
   // Inject assets to the data directory where hugo can pick up.
-  fs.writeFile('hugo/data/assets.json', JSON.stringify(assets), 'utf8', err => {
-    if (err) {
-      $.util.log('[hugo:build]', chalk.red(err));
-      return done();
-    }
-    // Start hugo after asset injection.
-    cprocess.spawn('hugo', args, { stdio: 'inherit' }).on('close', code => {
-      if (code === 0) {
-        if (!production) {
-          browserSync.reload();
-        }
-      } else {
-        $.util.log(
-          '[hugo:build]',
-          chalk.red('Unable to start hugo process. Code ' + code)
-        );
+  // fs.writeFile(
+  //   `hugo/themes/${THEME}/data/assets.json`,
+  //   JSON.stringify(assets),
+  //   'utf8',
+  //   err => {
+  //     if (err) {
+  //       $.util.log('[hugo:build]', chalk.red(err));
+  //       return done();
+  //     }
+  // Start hugo after asset injection.
+  cprocess.spawn('hugo', args, { stdio: 'inherit' }).on('close', code => {
+    if (code === 0) {
+      if (!PRODUCTION) {
+        browserSync.reload();
       }
-      done();
-    });
+    } else {
+      $.util.log(
+        '[hugo:build]',
+        chalk.red('Unable to start hugo process. Code ' + code)
+      );
+    }
+    done();
   });
+  // }
+  // );
 });
-gulp.task('hugo:clean', () => del(['build/**']));
+gulp.task('hugo:clean', () =>
+  del(['build/**', '!build', '!build/assets', '!build/assets/**/*'])
+);
 
 gulp.task('all', done => runSequence('all:clean', 'all:build', done));
 gulp.task('all:build', done => runSequence('assets:build', 'hugo:build', done));
-gulp.task('all:clean', () => del(['build']));
+gulp.task('all:clean', () => del(['hugo:clean', 'assets:clean']));
 
 gulp.task('server', ['all'], () => {
   browserSync.init({
@@ -81,6 +95,9 @@ gulp.task('server', ['all'], () => {
   });
   // Whenever we make a change in src directory, webpack's output
   // to the hugo directory rebuilds hugo.
-  gulp.watch(['src/**/*'], ['assets']);
-  gulp.watch(['hugo/**/*', '!hugo/data/assets.json'], ['hugo']);
+  gulp.watch(['src/**/*.{js,scss}'], ['assets']);
+  gulp.watch(
+    ['hugo/**/*.*', `!hugo/themes/${THEME}/data/assets.json`],
+    ['hugo']
+  );
 });

@@ -1,0 +1,12 @@
+{{define "main"}}
+  <p><a href="/">Bryan Kang</a> // Blog</p>
+  {{range .Pages}}
+    <a href="{{.Permalink}}">
+      <h1>{{.Title}}</h1>
+      <!-- if current year, don't show year -->
+      <p>{{.PublishDate.Format "1/2/06"}}</p>
+      <p>{{.Lastmod}}</p>
+      <p>{{.Params.summary}}</p>
+    </a>
+  {{end}}
+{{end}}

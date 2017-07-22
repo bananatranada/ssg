@@ -1,0 +1,9 @@
+{{define "main"}}
+  <div class="mw-thirtytwo mx-auto">
+  <p><a href="/">Bryan Kang</a> // <a href="/{{.Section}}">Blog</a></p>
+  <h1 class="f-12 fw-7">{{.Title}}</h1>
+  <p>{{.PublishDate.Format "January 2 2006"}}</p>
+      <p>{{.Lastmod}}</p>
+{{.Content}}
+      </div>
+{{end}}

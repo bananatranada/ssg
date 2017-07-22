@@ -1,0 +1,7 @@
+baseurl = "/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+theme = "bk-blog"
+PygmentsCodeFences = true
+PygmentsStyle = "pastie"
+pygmentsuseclasses = true

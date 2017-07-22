@@ -1,5 +1,10 @@
----
++++
+title = "second post yo"
+publishdate = "2017-04-02T19:39:00-05:00"
+lastmod = "2017-04-02T19:39:00-05:00"
+summary = "How I made my second post"
++++
 
----
 
-# Second post!
+
+hello world

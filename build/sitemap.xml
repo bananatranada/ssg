@@ -8,15 +8,13 @@
   </url>
   
   <url>
-    <loc>/blog/first-post/</loc>
-  </url>
-  
-  <url>
-    <loc>/blog/second-post/</loc>
+    <loc>/ramdom/rand1/</loc>
+    <lastmod>2017-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/blog/</loc>
+    <lastmod>2017-04-02T19:39:00-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -26,8 +24,24 @@
   </url>
   
   <url>
+    <loc>/blog/first-post/</loc>
+    <lastmod>2017-04-02T19:39:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/ramdom/</loc>
+    <lastmod>2017-04-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/blog/second-post/</loc>
+    <lastmod>2017-04-02T19:39:00-05:00</lastmod>
   </url>
   
 </urlset>
