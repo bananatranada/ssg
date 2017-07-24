@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blogs on My New Hugo Site</title>
+    <title>Blogs on Bryan Kang</title>
     <link>/blog/</link>
-    <description>Recent content in Blogs on My New Hugo Site</description>
+    <description>Recent content in Blogs on Bryan Kang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
@@ -11,7 +11,7 @@
     
     
     <item>
-      <title>First post yo</title>
+      <title>First Post Yo </title>
       <link>/blog/first-post/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       

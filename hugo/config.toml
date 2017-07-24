@@ -1,7 +1,6 @@
 baseurl = "/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Bryan Kang"
 theme = "bk-blog"
-PygmentsCodeFences = true
-PygmentsStyle = "pastie"
 pygmentsuseclasses = true
+aliases = ["/", "/blog/"]

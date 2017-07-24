@@ -53,7 +53,8 @@ $colors: (
   'light-purple': #a463f2,
   'dark-pink': #d5008f,
   'hot-pink':#ff41b4,
-  'pink': #ff80cc,
+  // 'pink': #ff80cc,
+  'pink': #FFA0A0,
   'light-pink': #ffa3d7,
   'dark-green': #137752,
   'green': #19a974,
@@ -67,6 +68,8 @@ $colors: (
   'washed-green': #e8fdf5,
   'washed-yellow': #fffceb,
   'washed-red': #ffdfdf,
+
+  'inherit': inherit,
 ) !default;
 
 
@@ -87,6 +90,10 @@ $global-breakpoints: (
 
 
 $spacers: (
+  'n5': -11.089rem,
+  'n4': -6.854rem,
+  'n3': -4.236rem,
+  'n2': -1.618rem,
   'n1': -1rem,
   '1': 1rem,
   '2': 1.618rem,
@@ -176,7 +183,7 @@ $shortcuts: (
       'none': none,
     )
   ),
-  'c': (
+  'cl': (
     'breakpoints': (xs),
     'props': (clear),
     'mods': (
@@ -205,6 +212,7 @@ $shortcuts: (
     'breakpoints': (xs),
     'props': (width),
     'mods': (
+      'thirtytwo': 32rem,
       '1': 1rem,
       '2': 1.618rem,
       '3': 4.236rem,
@@ -468,11 +476,16 @@ $shortcuts: (
       '5': 5,
     ),
   ),
+  'fbb': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (flex-basis),
+    'mods': $spacers,
+  ),
 
 
 
   // Theming
-  '': (
+  'c': (
     'breakpoints': (xs, sm, md, lg),
     'props': (color),
     'mods': $colors,
@@ -630,9 +643,41 @@ $shortcuts: (
     )
   ),
 
+  'td-hov': (
+    'breakpoints': (xs),
+    'props': (text-decoration),
+    'mods': (
+      'u:hover': underline,
+    )
+  ),
+  'td-foc': (
+    'breakpoints': (xs),
+    'props': (text-decoration),
+    'mods': (
+      'u:focus': underline,
+    )
+  ),
+  'c-vis': (
+    'breakpoints': (xs),
+    'props': (color),
+    'mods': (
+      'black-50:visited': map-get($colors, 'black-50'),
+      'inherit:visited': inherit,
+    )
+  ),
+
+  'blog-item-hover': (
+    'breakpoints': (xs),
+    'props': (text-decoration),
+    'mods': (
+      'u:hover > div > h1': underline
+    )
+  ),
+
+
 
   // TYPOGRAPHY
-  'f': (
+  'fsz': (
     'breakpoints': (xs),
     'props': (font-size),
     'mods': $type-scale,
@@ -651,8 +696,9 @@ $shortcuts: (
     'props': (letter-spacing),
     'mods': (
       '0': 0,
-      '1': .1em,
-      '2': .25em,
+      '1': .05em,
+      '2': .1em,
+      '3': .25em,
     ),
   ),
   'fw': (
@@ -678,7 +724,7 @@ $shortcuts: (
       'i': italic,
     ),
   ),
-  'v': (
+  'va': (
     'breakpoints': (xs),
     'props': (vertical-align),
     'mods': (
@@ -686,15 +732,35 @@ $shortcuts: (
       'mid': middle,
       'top': top,
       'bot': bottom,
+      'n1': -1px,
+      '1': 1px,
+    ),
+  ),
+  'ta': (
+    'breakpoints': (xs),
+    'props': (text-align),
+    'mods': (
+      'l': left,
+      'r': right,
+      'c': center,
     ),
   ),
   'tt': (
     'breakpoints': (xs),
     'props': (text-transform),
     'mods': (
-      'c': capitalize,
-      'l': lowercase,
-      'u': uppercase,
+      'cap': capitalize,
+      'lower': lowercase,
+      'upper': uppercase,
+      'rm': none,
+    ),
+  ),
+  'td': (
+    'breakpoints': (xs),
+    'props': (text-decoration),
+    'mods': (
+      'u': underline,
+      'lt': line-through,
       'rm': none,
     ),
   ),
@@ -726,9 +792,10 @@ $shortcuts: (
     'breakpoints': (xs),
     'props': (font-family),
     'mods': (
-      'system': (Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace) !important,
+      'system': (Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace),
     ),
   ),
+
 ) !default;
 
 
@@ -772,17 +839,12 @@ $shortcuts: (
 
         @each $breakpoint in $breakpoints {
             @include breakpoint($breakpoint) {
-                // $global-breakpoint: breakpoint-key($global-breakpoints, $global-breakpoint);
-                // $global-breakpoint: if($min-width == 0, '', $global-breakpoint);
-                // @debug $global-breakpoint;
-                // $global-breakpoint-infix: if($global-breakpoint == '', $breakpoint, infix($global-breakpoint, $shortcut));
-                // $global-breakpoint-infix: infix($global-breakpoint);
                 $breakpoint: if(map-get($global-breakpoints, $breakpoint) == 0, '', $breakpoint);
                 $breakpoint-infix: infix($breakpoint, $shortcut);
                 @each $mod, $val in $mods {
                     $mod-infix: infix($mod, $shortcut, $breakpoint-infix);
                     @each $prop in $props {
-                        .#{$shortcut}#{$breakpoint-infix}#{$mod-infix} { #{$prop}: #{$val}; }
+                        .#{$shortcut}#{$breakpoint-infix}#{$mod-infix} { #{$prop}: #{$val} !important; }
                     }
                 }
             }

@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>_index on My New Hugo Site</title>
+    <title>Bryan Kang</title>
     <link>/</link>
-    <description>Recent content in _index on My New Hugo Site</description>
+    <description>Recent content on Bryan Kang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Jun 2017 20:01:14 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 02 Apr 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>random post yo</title>
-      <link>/ramdom/rand1/</link>
+      <link>/contact/rand1/</link>
       <pubDate>Sun, 02 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>/ramdom/rand1/</guid>
+      <guid>/contact/rand1/</guid>
       <description>&lt;p&gt;My random post summary&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>First post yo</title>
+      <title>First Post Yo </title>
       <link>/blog/first-post/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       

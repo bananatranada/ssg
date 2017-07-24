@@ -1,0 +1,7 @@
+<div class="mb-1 ffss-system fsz-1 fw-400 ls-2 tt-upper c-mid-gray">
+  <a class="td-rm td-hov-u td-foc-u c-vis-inherit" href="/">{{.Site.Title}}</a>
+  {{range .Site.Sections}}
+    <span class="va-1"> // </span>
+    <a class="td-rm td-hov-u c-vis-inherit" href="/{{.Section}}">{{.Section}}</a>
+  {{end}}
+</div>

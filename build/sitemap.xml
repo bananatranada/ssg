@@ -3,12 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/</loc>
-    <lastmod>2017-06-15T20:01:14-05:00</lastmod>
+    <loc>/contact/rand1/</loc>
+    <lastmod>2017-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/ramdom/rand1/</loc>
+    <loc>/</loc>
     <lastmod>2017-04-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -24,14 +24,14 @@
   </url>
   
   <url>
-    <loc>/blog/first-post/</loc>
-    <lastmod>2017-04-02T19:39:00-05:00</lastmod>
+    <loc>/contact/</loc>
+    <lastmod>2017-04-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/ramdom/</loc>
-    <lastmod>2017-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>/blog/first-post/</loc>
+    <lastmod>2017-04-02T19:39:00-05:00</lastmod>
   </url>
   
   <url>

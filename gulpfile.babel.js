@@ -11,7 +11,13 @@ const browserSync = require('browser-sync').create();
 const PRODUCTION = process.env.NODE_ENV === 'production';
 const THEME = 'bk-blog';
 
-gulp.task('assets', done => runSequence('assets:clean', 'assets:build', done));
+gulp.task('assets:clean', () =>
+  del([
+    `hugo/themes/${THEME}/static/assets/**`,
+    `hugo/themes/${THEME}/data/assets.json`,
+    'build/assets/**',
+  ])
+);
 gulp.task('assets:build', done => {
   const configWebpack = PRODUCTION
     ? require('./webpack.config.prod.js')
@@ -26,15 +32,9 @@ gulp.task('assets:build', done => {
     done();
   });
 });
-gulp.task('assets:clean', () =>
-  del([
-    `hugo/themes/${THEME}/static/assets/**`,
-    `hugo/themes/${THEME}/data/assets.json`,
-  ])
-);
+gulp.task('assets', gulp.series('assets:clean', 'assets:build'));
 
 // Depends on assets tasks.
-gulp.task('hugo', done => runSequence('hugo:clean', 'hugo:build', done));
 gulp.task('hugo:build', done => {
   // Our hugo build requires asset paths produced by webpack. This is useful
   // when they're appended by hashes for cache busting.
@@ -80,24 +80,29 @@ gulp.task('hugo:build', done => {
 gulp.task('hugo:clean', () =>
   del(['build/**', '!build', '!build/assets', '!build/assets/**/*'])
 );
+gulp.task('hugo', gulp.series('hugo:clean', 'hugo:build'));
 
-gulp.task('all', done => runSequence('all:clean', 'all:build', done));
-gulp.task('all:build', done => runSequence('assets:build', 'hugo:build', done));
-gulp.task('all:clean', () => del(['hugo:clean', 'assets:clean']));
+gulp.task('all:build', gulp.series('assets:build', 'hugo:build'));
+// gulp.task('all:clean', () => del(['hugo:clean', 'assets:clean']));
+gulp.task('all:clean', gulp.series('assets:clean', 'hugo:clean'));
+gulp.task('all', gulp.series('all:clean', 'all:build'));
 
-gulp.task('server', ['all'], () => {
-  browserSync.init({
-    server: {
-      baseDir: 'build',
-    },
-    open: false,
-    notify: false,
-  });
-  // Whenever we make a change in src directory, webpack's output
-  // to the hugo directory rebuilds hugo.
-  gulp.watch(['src/**/*.{js,scss}'], ['assets']);
-  gulp.watch(
-    ['hugo/**/*.*', `!hugo/themes/${THEME}/data/assets.json`],
-    ['hugo']
-  );
-});
+gulp.task(
+  'server',
+  gulp.series('all', () => {
+    browserSync.init({
+      server: {
+        baseDir: 'build',
+      },
+      open: false,
+      notify: false,
+    });
+    // Whenever we make a change in src directory, webpack's output
+    // to the hugo directory rebuilds hugo.
+    gulp.watch(['src/**/*.{js,scss}'], gulp.series('assets'));
+    gulp.watch(
+      ['hugo/**/*', `!hugo/themes/${THEME}/data/assets.json`],
+      gulp.series('hugo')
+    );
+  })
+);

@@ -1,0 +1,16 @@
+{{define "main"}}
+  <div class="blog-list mw-thirtytwo mx-auto mt-4">
+    <div class="mb-1 ffss-system f-1 fw-400 tt-u ls-2 c-gray"><a class="td-rm td-hov-u td-foc-u c-vis-inherit" href="/">Bryan Kang</a> <span class="v-1">//</span> Blog</div>
+    {{range .Pages}}
+      <div class="d-flex ml-n4">
+        <div class="w-4 pr-2 ta-r v-bot f-4 fw-7 c-pink">{{.PublishDate.Format "1/2/06"}}</div>
+        <a class="blog-item blog-hover-u td-rm c-inherit c-vis-inherit" href="{{.Permalink}}">
+          <h1 class="mb-1 f-5 fw-7">{{.Title}}</h1>
+          <!-- if current year, don't show year -->
+          <!-- <p>{{.Lastmod}}</p> -->
+          <p class="mb-2 f-2 c-light-silver">{{.Params.summary}}</p>
+        </a>
+      </div>
+    {{end}}
+  </div>
+{{end}}

@@ -1,5 +1,6 @@
 import path from 'path';
 import webpack from 'webpack';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import ManifestPlugin from 'webpack-manifest-plugin';
 
 module.exports = function(THEME) {
@@ -11,7 +12,7 @@ module.exports = function(THEME) {
       publicPath: '/',
     },
     module: {
-      loaders: [
+      rules: [
         { test: /\.json$/, loader: 'json-loader' },
         {
           loader: 'babel-loader',
@@ -20,7 +21,14 @@ module.exports = function(THEME) {
         },
         {
           test: /\.scss$/,
-          loaders: ['style-loader', 'css-loader', 'sass-loader'],
+          // use: ExtractTextPlugin.extract({
+          // fallback: 'style-loader',
+          use: [
+            'style-loader',
+            { loader: 'css-loader', options: { importLoaders: 1 } },
+            'sass-loader',
+          ],
+          // }),
         },
       ],
     },
@@ -29,6 +37,7 @@ module.exports = function(THEME) {
       new webpack.ProvidePlugin({
         fetch: 'imports?this=>global!exports?global.fetch!whatwg-fetch',
       }),
+      // new ExtractTextPlugin('assets/css/main.css'),
       new ManifestPlugin({
         fileName: '../data/assets.json',
         publicPath: '/',
