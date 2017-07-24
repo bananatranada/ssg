@@ -38,7 +38,6 @@ gulp.task('assets', gulp.series('assets:clean', 'assets:build'));
 gulp.task('hugo:build', done => {
   // Our hugo build requires asset paths produced by webpack. This is useful
   // when they're appended by hashes for cache busting.
-  // const assets = require(`./hugo/themes/${THEME}/static/assets.json`);
   // For production, discard drafts and future content.
   const args = PRODUCTION
     ? ['-d', `${__dirname}/build`, '-s', 'hugo']
@@ -50,16 +49,6 @@ gulp.task('hugo:build', done => {
         '--buildDrafts',
         '--buildFuture',
       ];
-  // Inject assets to the data directory where hugo can pick up.
-  // fs.writeFile(
-  //   `hugo/themes/${THEME}/data/assets.json`,
-  //   JSON.stringify(assets),
-  //   'utf8',
-  //   err => {
-  //     if (err) {
-  //       $.util.log('[hugo:build]', chalk.red(err));
-  //       return done();
-  //     }
   // Start hugo after asset injection.
   cprocess.spawn('hugo', args, { stdio: 'inherit' }).on('close', code => {
     if (code === 0) {
@@ -74,8 +63,6 @@ gulp.task('hugo:build', done => {
     }
     done();
   });
-  // }
-  // );
 });
 gulp.task('hugo:clean', () =>
   del(['build/**', '!build', '!build/assets', '!build/assets/**/*'])

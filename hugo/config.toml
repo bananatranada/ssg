@@ -4,3 +4,17 @@ title = "Bryan Kang"
 theme = "bk-blog"
 pygmentsuseclasses = true
 aliases = ["/", "/blog/"]
+SectionPagesMenu = "main"
+
+[[menu.main]]
+  identifier = "blog"
+  name = "Blog"
+  weight = 100
+  url = "/blog/"
+
+[[menu.main]]
+  identifier = "contact"
+  weight = 200
+  name = "Contact"
+  url = "/contact/"
+

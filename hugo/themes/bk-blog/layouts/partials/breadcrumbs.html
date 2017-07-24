@@ -1,7 +1,24 @@
 <div class="mb-1 ffss-system fsz-1 fw-400 ls-2 tt-upper c-mid-gray">
-  <a class="td-rm td-hov-u td-foc-u c-vis-inherit" href="/">{{.Site.Title}}</a>
-  {{range .Site.Sections}}
+  <a class="td-rm td-hov-u td-foc-u c-inherit c-vis-inherit" href="/">
+    {{- if not $.Section -}}
+      <b>{{$.Site.Title}}</b>
+    {{- else -}}
+      {{$.Site.Title}}
+    {{- end -}}
+  </a>
+<!--   {{range $.Site.Sections}}
     <span class="va-1"> // </span>
-    <a class="td-rm td-hov-u c-vis-inherit" href="/{{.Section}}">{{.Section}}</a>
-  {{end}}
+    <a class="td-rm td-hov-u c-inherit c-vis-inherit" href="/{{.Section}}">
+      {{- if eq $.Section .Section -}}
+        <b>{{.Section}}</b>
+      {{- else -}}
+        {{.Section}}
+      {{- end -}}
+    </a>
+  {{end}} -->
+  {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+    <span class="va-1"> // </span>
+    <a class="td-rm td-hov-u c-inherit c-vis-inherit{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} fw-7{{end}}" href="{{.URL}}">{{ .Name }}</a>
+    {{ end }}
 </div>
