@@ -8,9 +8,9 @@
     {{partial "breadcrumbs.html" .}}
     {{range .Pages}}
       <a class="d-flex fbac-stretch ml-n4 blog-item-hover-u td-rm c-inherit c-vis-inherit" href="{{.Permalink}}">
-        <div class="blog-list-date vis-rm vis-md fbb-4 fbs-0 pr-2 ta-r va-bot fsz-3 fw-7 c-pink">{{.PublishDate.Format "1/2/06"}}</div>
+        <div class="vis-rm vis-md fbb-4 fbs-0 pr-2 ta-r va-bot fsz-3 fw-7 c-pink js-simplify-date">{{.PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700"}}</div>
         <div>
-          <p class="blog-list-date d-md-rm fsz-1 fw-7 c-pink">{{.PublishDate.Format "1/2/06"}}</p>
+          <p class="d-md-rm fsz-1 fw-7 c-pink js-simplify-date">{{.PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700"}}</p>
           <h1 class="mb-md-1 fsz-5 fw-7">{{.Title}}</h1>
           <p class="mb-2 fsz-2 c-light-silver">{{.Params.summary}}</p>
         </div>
