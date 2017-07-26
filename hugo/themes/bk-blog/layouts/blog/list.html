@@ -1,5 +1,5 @@
 {{define "main"}}
-  <div class="blog-list mw-thirtytwo mx-auto mt-4">
+  <div class="blog-list mw-thirtytwo mx-auto mt-3 mt-md-4">
     <!-- <div class="mb-1 ffss-system fsz-1 fw-400 tt-u ls-2 c-mid-gray">
       <a class="td-rm td-hov-u td-foc-u c-vis-inherit" href="/">{{.Site.Title}}</a>
       <span class="va-1"> // </span>
@@ -8,9 +8,10 @@
     {{partial "breadcrumbs.html" .}}
     {{range .Pages}}
       <a class="d-flex fbac-stretch ml-n4 blog-item-hover-u td-rm c-inherit c-vis-inherit" href="{{.Permalink}}">
-        <div class="fbb-4 fbs-0 pr-2 ta-r va-bot fsz-3 fw-7 c-pink">{{.PublishDate.Format "1/2/06"}}</div>
+        <div class="blog-list-date vis-rm vis-md fbb-4 fbs-0 pr-2 ta-r va-bot fsz-3 fw-7 c-pink">{{.PublishDate.Format "1/2/06"}}</div>
         <div>
-          <h1 class="mb-1 fsz-5 fw-7">{{.Title}}</h1>
+          <p class="blog-list-date d-md-rm fsz-1 fw-7 c-pink">{{.PublishDate.Format "1/2/06"}}</p>
+          <h1 class="mb-md-1 fsz-5 fw-7">{{.Title}}</h1>
           <p class="mb-2 fsz-2 c-light-silver">{{.Params.summary}}</p>
         </div>
       </a>

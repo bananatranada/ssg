@@ -12,3 +12,12 @@
 .blog-item:hover > h1 {
   // text-decoration: underline;
 }
+
+.blog img {
+  // @extend .my-2;
+  @extend .w-100p;
+}
+
+.blog p:last-child {
+  @extend .mb-5;
+}

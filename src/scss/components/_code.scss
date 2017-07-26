@@ -66,9 +66,10 @@
 
 .highlight {
   border-radius: 1px;
-  @extend .m-n2;
+  // @extend .m-n2;
   @extend .p-2;
   @extend .my-2;
+  overflow: auto;
   // margin: -12px;
   // padding: 12px;
 }

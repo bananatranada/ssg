@@ -1,42 +1,19 @@
-// import 'bootstrap/js/src/alert';
-// import 'bootstrap/js/src/button';
-// import 'bootstrap/js/src/carousel';
-// import 'bootstrap/js/src/collapse';
-// import 'bootstrap/js/src/dropdown';
-// import 'bootstrap/js/src/modal';
-// import 'bootstrap/js/src/popover';
-// import 'bootstrap/js/src/scrollspy';
-// import 'bootstrap/js/src/tab';
-// import 'bootstrap/js/src/tooltip';
+import moment from 'moment';
+import dateformat from 'dateformat';
 
-// // $('.navbar-popup__open-button').click(e => {
-// //   e.preventDefault();
-// //   $('.navbar-popup__container').css('display', 'block');
-// //   setTimeout(
-// //     () =>
-// //       $('.navbar-popup__container').addClass('navbar-popup__container--active'),
-// //     0,
-// //   );
-// //
-// //   setTimeout(
-// //     () =>
-// //       $('.navbar-popup__container').removeClass(
-// //         'navbar-popup__container--active',
-// //       ),
-// //     2000,
-// //   );
-// // });
+const currentYear = new Date().getFullYear();
+console.log(currentYear);
 
-// $('.navbar-popup__open-button').click(e => {
-//   e.preventDefault();
-//   e.stopPropagation();
-//   $('.navbar-popup').addClass('navbar-popup--active');
-// });
-
-// $(document).click(e => {
-//   if ($(e.target).closest('.navbar-popup').length) {
-//     return;
-//   }
-//   $('.navbar-popup').removeClass('navbar-popup--active');
-// });
-// console.log('yo!!');
+const blogListDateEls = document.getElementsByClassName('blog-list-date');
+for (let i = 0; i < blogListDateEls.length; i++) {
+  const el = blogListDateEls[i];
+  const postDate = new Date(el.innerText);
+  const postYear = postDate.getFullYear();
+  if (postYear !== currentYear) {
+    continue;
+  }
+  el.innerText = dateformat(postDate, 'm/d');
+  // if (date.get(''))
+  console.log(el.innerText);
+  console.log(new Date(el.innerText).getFullYear());
+}

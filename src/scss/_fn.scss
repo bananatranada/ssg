@@ -195,10 +195,10 @@ $shortcuts: (
   ),
 
   'd': (
-    'breakpoints': (xs),
+    'breakpoints': (xs, sm, md, lg),
     'props': (display),
     'mods': (
-      'none': none,
+      'rm': none,
       'inline': inline,
       'inline-block': inline-block,
       'block': block,
@@ -514,6 +514,14 @@ $shortcuts: (
       '100p': 1,
     )
   ),
+  'vis': (
+    'breakpoints': (xs, sm, md, lg),
+    'props': (visibility),
+    'mods': (
+      'rm': hidden,
+      '': visible
+    )
+  ),
 
   'bc': (
     'breakpoints': (xs),
@@ -737,7 +745,7 @@ $shortcuts: (
     ),
   ),
   'ta': (
-    'breakpoints': (xs),
+    'breakpoints': (xs, s, md, lg),
     'props': (text-align),
     'mods': (
       'l': left,
