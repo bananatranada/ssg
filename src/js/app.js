@@ -1,4 +1,3 @@
-import moment from 'moment';
 import dateformat from 'dateformat';
 
 const currentYear = new Date().getFullYear();

@@ -14,10 +14,14 @@
 }
 
 .blog img {
-  // @extend .my-2;
+  @extend .my-1;
   @extend .w-100p;
 }
 
 .blog p:last-child {
   @extend .mb-5;
+}
+
+.blog h2 {
+  @extend .fsz-13;
 }

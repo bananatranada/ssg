@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "Bryan Kang"
 theme = "bk-blog"
 pygmentsuseclasses = true
+PygmentsCodeFences = true
 aliases = ["/", "/blog/"]
 SectionPagesMenu = "main"
 

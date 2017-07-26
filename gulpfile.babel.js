@@ -11,6 +11,7 @@ const browserSync = require('browser-sync').create();
 const PRODUCTION = process.env.NODE_ENV === 'production';
 const THEME = 'bk-blog';
 
+// TODO: Add a pipeline for hugo/static/assets
 gulp.task('assets:clean', () =>
   del([
     `hugo/themes/${THEME}/static/assets/**`,
@@ -86,9 +87,9 @@ gulp.task(
     });
     // Whenever we make a change in src directory, webpack's output
     // to the hugo directory rebuilds hugo.
-    gulp.watch(['src/**/*.{js,scss}'], gulp.series('assets'));
+    gulp.watch(['src/**/*.{js,scss}'], gulp.series('assets', 'hugo'));
     gulp.watch(
-      ['hugo/**/*', `!hugo/themes/${THEME}/data/assets.json`],
+      ['hugo/**/*', `!hugo/themes/${THEME}/static/assets/**/*`, `!hugo/themes/${THEME}/data/assets.json`],
       gulp.series('hugo')
     );
   })

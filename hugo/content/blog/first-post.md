@@ -14,12 +14,16 @@ Gatsby uses standard React.js components to render pages. When you define a page
 
 Gatsby uses standard React.js components to render pages. When you define a page in the createPages API, you specify its component. Those components, usually called templates, get reused with page-specific data to generate the different pages.
 
-{{<highlight javascript>}}
+a | b | c
+---|---|---
+r1 | r1 | r1
+
+```javascript
 // This will..
 function greet() {
   console.log('hello world');
 }
-{{</highlight>}}
+```
 
 Gatsby uses standard React.js components to render pages. When you define a page in the createPages API, you specify its component. Those components, usually called templates, get reused with page-specific data to generate the different pages.
 
