@@ -1,7 +1,7 @@
 baseurl = "/"
 languageCode = "en-us"
 title = "Bryan Kang"
-theme = "bk-blog"
+theme = "ssg-webpack"
 pygmentsuseclasses = true
 PygmentsCodeFences = true
 aliases = ["/", "/blog/"]
