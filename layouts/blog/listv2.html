@@ -1,10 +1,5 @@
 {{define "main"}}
-  <div class="blog-list mw-thirtytwo mx-auto mt-3 mt-md-4">
-    <!-- <div class="mb-1 ffss-system fsz-1 fw-400 tt-u ls-2 c-mid-gray">
-      <a class="td-rm td-hov-u td-foc-u c-vis-inherit" href="/">{{.Site.Title}}</a>
-      <span class="va-1"> // </span>
-      Blog
-    </div> -->
+  <div class="blog-list ffs-merriweather">
     {{partial "breadcrumbs.html" .}}
     {{range .Pages}}
       <a class="d-flex fbac-stretch ml-n4 blog-item-hover-u td-rm c-inherit c-vis-inherit" href="{{.Permalink}}">

@@ -3,10 +3,14 @@
 <head>
   <title>{{.Site.Title}}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  {{ if .RSSLink }}
+  <link href="/feed/atom.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  {{ end }}
   <link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
  {{ with index .Site.Data.assets_manifest "main.css" }}
     <link rel="stylesheet" href="{{ . }}"/>
   {{ end }}
+  {{ template "_internal/google_analytics_async.html" . }}
 </head>
 <body class="px-2 ffs-merriweather lh-2 c-dark-gray">

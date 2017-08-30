@@ -63,14 +63,14 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        // use: ExtractTextPlugin.extract({
-        // fallback: 'style-loader',
-        use: [
-          'style-loader',
-          { loader: 'css-loader', options: { importLoaders: 1 } },
-          'sass-loader',
-        ],
-        // }),
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            // 'style-loader',
+            { loader: 'css-loader', options: { importLoaders: 1 } },
+            'sass-loader',
+          ],
+        }),
       },
     ],
   },
@@ -79,7 +79,7 @@ module.exports = {
     new webpack.ProvidePlugin({
       fetch: 'imports?this=>global!exports?global.fetch!whatwg-fetch',
     }),
-    // new ExtractTextPlugin('assets/css/main.css'),
+    new ExtractTextPlugin('css/main.css'),
     new ManifestPlugin({
       fileName: 'assets_manifest.json', // Go templates can't take -, so use _
       publicPath: '/assets/', // prepend /assets/ to the asset paths

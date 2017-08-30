@@ -1,0 +1,14 @@
+{{define "main"}}
+  <div class="c-mid-gray">
+    {{partial "breadcrumbs.html" .}}
+    <h1 class="mb-1 fsz-7 fw-7">{{title .Data.Plural}}</h1>
+    <ul>
+      {{ $data := .Data }}
+      {{ range $key, $value := .Data.Terms.Alphabetical }}
+        <li class="">
+          <a class="td-rm td-hov-u td-foc-u c-inherit c-vis-inherit" href="{{ $.Site.LanguagePrefix }}/{{ $data.Plural }}/{{ $value.Name | urlize }}"> {{ title $value.Name }} </a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+{{end}}

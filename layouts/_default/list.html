@@ -1,6 +1,23 @@
 {{define "main"}}
-  <div class="blog mw-thirtytwo mx-auto mt-3 mt-md-4">
+  <div class="blog-list ffs-merriweather">
     {{partial "breadcrumbs.html" .}}
-    {{.Content}}
+    {{range .Paginator.Pages}}
+      <a class="d-flex fbac-stretch ml-n4 blog-item-hover-u td-rm c-inherit c-vis-inherit" href="{{.Permalink}}">
+        <div class="vis-rm vis-md fbb-4 fbs-0 pr-2 ta-r va-bot fsz-3 fw-7 c-pink js-simplify-date">{{.PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700"}}</div>
+        <div>
+          <p class="d-md-rm fsz-1 fw-7 c-pink js-simplify-date">{{.PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700"}}</p>
+          <h1 class="mb-md-1 fsz-5 fw-7">{{.Title}}</h1>
+          <p class="mb-2 fsz-2 c-light-silver">{{.Params.summary}}</p>
+        </div>
+      </a>
+    {{end}}
+    <nav class="mb-5 c-pink">
+      {{- if .Paginator.HasPrev -}}
+        <a class="d-inline-block py-1 pr-1 c-inherit c-vis-inherit" href="{{.Paginator.Prev.URL}}">Newer</a>
+      {{- end -}}
+      {{- if .Paginator.HasNext -}}
+        <a class="d-inline-block py-1 pr-1 c-inherit c-vis-inherit" href="{{.Paginator.Next.URL}}">Older</a>
+      {{- end -}}
+    </nav>
   </div>
 {{end}}

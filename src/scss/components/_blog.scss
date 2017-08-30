@@ -14,17 +14,31 @@
 }
 
 .blog img {
-  @extend .my-1;
+  @extend .mt-2;
+  @extend .mb-1;
   @extend .w-100p;
 }
 
+.blog figcaption {
+  @extend .mb-2;
+  @extend .mx-auto;
+  // @extend .d-inline-block;
+  // text-align: center;
+  // @extend .fsz-2;
+  @extend .fs-i;
+  @extend .ta-c;
+
+  @extend .c-moon-gray;
+}
+
 .blog p:last-child {
-  @extend .mb-5;
+  @extend .mb-3;
+  @extend .mb-md-5;
 }
 
 .blog h2 {
   @extend .mb-1;
-  @extend .fsz-9;
+  @extend .fsz-7;
   @extend .fw-7;
 }
 

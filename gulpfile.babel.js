@@ -79,13 +79,23 @@ gulp.task('all', gulp.series('all:clean', 'all:build'));
 gulp.task(
   'server',
   gulp.series('all', () => {
-    browserSync.init({
-      server: {
-        baseDir: 'build',
+    browserSync.init(
+      {
+        server: {
+          baseDir: 'build',
+        },
+        open: false,
+        notify: false,
       },
-      open: false,
-      notify: false,
-    });
+      function(err, bs) {
+        bs.addMiddleware('*', function(req, res) {
+          res.writeHead(302, {
+            location: '404.html',
+          });
+          res.end('Redirecting!');
+        });
+      }
+    );
     // Whenever we make a change in src directory, webpack's output
     // to the hugo directory rebuilds hugo.
     gulp.watch(['src/**/*.{js,scss}'], gulp.series('assets', 'hugo'));

@@ -5,7 +5,9 @@ theme = "ssg-webpack"
 pygmentsuseclasses = true
 PygmentsCodeFences = true
 aliases = ["/", "/blog/"]
+googleAnalytics = ""
 SectionPagesMenu = "main"
+Paginate = 20
 
 [[menu.main]]
   identifier = "blog"
@@ -19,3 +21,18 @@ SectionPagesMenu = "main"
   name = "Contact"
   url = "/contact/"
 
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[mediaTypes]
+  [mediaTypes."application/atom"]
+    suffix = "xml"
+
+[outputFormats.Atom]
+  mediaType = "application/atom"
+  baseName = "index"
+  isPlainText = false
+
+[outputs]
+  home = [ "HTML", "Atom" ]
